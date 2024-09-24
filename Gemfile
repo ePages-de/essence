@@ -16,3 +16,12 @@ gem 'sprockets-rails'
 
 gem 'rubocop',       require: false
 gem 'rubocop-rails', require: false
+
+group :development, :test do
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'selenium-webdriver'
+end
