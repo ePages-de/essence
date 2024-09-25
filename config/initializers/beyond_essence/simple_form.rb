@@ -83,9 +83,9 @@ SimpleForm.setup do |config|
 
   config.wrappers :vertical_collection,
                   item_wrapper_class: 'form-group',
-                  item_label_class:   'form-label',
-                  tag:                :fieldset,
-                  class:              'form-row form-fieldset' do |b|
+                  item_label_class: 'form-label',
+                  tag: :fieldset,
+                  class: 'form-row form-fieldset' do |b|
     b.use :html5
 
     b.wrapper :legend_tag, tag: :legend, class: 'form-legend' do |bb|
@@ -103,10 +103,10 @@ SimpleForm.setup do |config|
   # Custom wrappers for input types. This should be a hash containing an input
   # type as key and the wrapper that will be used for all inputs with specified type.
   config.wrapper_mappings = {
-    boolean:       :vertical_boolean,
-    check_boxes:   :vertical_collection,
+    boolean: :vertical_boolean,
+    check_boxes: :vertical_collection,
     radio_buttons: :vertical_collection,
-    select:        :vertical_select,
-    country:       :vertical_select
+    select: :vertical_select,
+    country: :vertical_select
   }
 end
