@@ -1,0 +1,8 @@
+<div <%= tag.attributes **html_options %>>
+  <h4 class="step-list-title"><%= title %></h4>
+  <div class="step-list-items">
+    <% items.each do |item| %>
+      <%= item %>
+    <% end %>
+  </div>
+</div>

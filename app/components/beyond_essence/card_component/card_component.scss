@@ -1,0 +1,21 @@
+:root {
+  --card-headline:       #a3a3a3;
+  --card-background:     white;
+  --card-shadow:         0 2px 7px rgba(0, 0, 0, 0.2);
+  --card-divider-border: 1px solid #e6e6e6;
+  --card-borderRadius:   3px;
+  --card-padding:        40px;
+}
+
+.card {
+  background-color: var(--card-background);
+  border-radius: var(--card-borderRadius);
+  box-shadow: var(--card-shadow);
+  padding: var(--card-padding);
+
+  &-headline {
+    color: var(--card-headline);
+    font-size: 140%;
+    margin: -10px 0 .83em;
+  }
+}

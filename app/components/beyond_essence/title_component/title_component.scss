@@ -1,0 +1,11 @@
+:root {
+  --workspace-headline: #676767;
+}
+
+.title {
+  color: var(--workspace-headline);
+  font-size: 190%;
+  font-weight: normal;
+  line-height: 1;
+  margin-bottom: -5px;
+}

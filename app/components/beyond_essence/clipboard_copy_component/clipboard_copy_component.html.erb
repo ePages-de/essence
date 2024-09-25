@@ -1,0 +1,18 @@
+<div <%= tag.attributes **html_options %>>
+  <%= simple_fields_for nil do |f| %>
+    <%= f.input input_name,
+                required: false,
+                readonly: true,
+                label: input_label,
+                input_html: {
+                  class: 'clipboard-copy-input',
+                  data: {
+                    clipboard_copy_target: 'input'
+                  },
+                  value: input_value
+                } %>
+  <% end %>
+  <%= render BeyondEssence::LinkComponent.new(name: link_text, url: '#', class: 'clipboard-copy-link', data: { clipboard_copy_target: 'link', action: 'clipboard-copy#ClipboardCopy' }) do |link| %>
+    <% link.with_left_icon 'copy' %>
+  <% end %>
+</div>

@@ -1,0 +1,7 @@
+<span <%= tag.attributes **html_options %>>
+  <%= render BeyondEssence::IconComponent.new(name: 'circle_info', class: 'tooltip-icon', data: { tooltip_target: 'icon' }) %>
+  <span class="tooltip-bubble" data-tooltip-target="bubble">
+    <span class="tooltip-arrow" data-tooltip-target="arrow"></span>
+    <%= text %>
+  </span>
+</span>
