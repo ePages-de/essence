@@ -36,11 +36,14 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = '>= 3.3'
 
-  spec.add_dependency 'country_select', '~> 9.0'
-  spec.add_dependency 'gretel',         '~> 5.0'
-  spec.add_dependency 'inline_svg',     '~> 1.10'
-  spec.add_dependency 'rails',          '>= 7.1.4'
-  spec.add_dependency 'sassc-rails',    '~> 2.1'
-  spec.add_dependency 'simple_form',    '~> 5.3'
-  spec.add_dependency 'view_component', '~> 3.14'
+  spec.add_dependency 'country_select',  '~> 9.0'
+  spec.add_dependency 'gretel',          '~> 5.0'
+  spec.add_dependency 'importmap-rails', '~> 2.0'
+  spec.add_dependency 'inline_svg',      '~> 1.10'
+  spec.add_dependency 'rails',           '>= 7.1.4'
+  spec.add_dependency 'sassc-rails',     '~> 2.1'
+  spec.add_dependency 'simple_form',     '~> 5.3'
+  spec.add_dependency 'stimulus-rails',  '~> 1.3'
+  spec.add_dependency 'turbo-rails',     '~> 2.0'
+  spec.add_dependency 'view_component',  '~> 3.14'
 end

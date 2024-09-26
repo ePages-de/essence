@@ -1,14 +1,17 @@
 # frozen_string_literal: true
 
+require 'country_select'
+require 'gretel'
+require 'importmap-rails'
+require 'inline_svg'
+require 'sassc-rails'
+require 'simple_form'
+require 'stimulus-rails'
+require 'turbo-rails'
+require 'view_component'
+
 require 'beyond_essence/version'
 require 'beyond_essence/engine'
-
-require 'country_select'
-require 'sassc-rails'
-require 'gretel'
-require 'inline_svg'
-require 'simple_form'
-require 'view_component'
 
 module BeyondEssence
   # Your code goes here...
