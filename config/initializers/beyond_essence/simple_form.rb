@@ -33,7 +33,7 @@ SimpleForm.setup do |config|
 
   config.wrappers :vertical_text,
                   class: 'form-row' do |b|
-    b.use :html5
+    b.use :html5 # rubocop:disable Naming/VariableNumber
     b.use :placeholder
 
     b.optional :maxlength
@@ -56,7 +56,7 @@ SimpleForm.setup do |config|
 
   config.wrappers :vertical_select,
                   class: 'form-row' do |b|
-    b.use :html5
+    b.use :html5 # rubocop:disable Naming/VariableNumber
 
     b.use :label, class: 'form-label'
     b.wrapper class: 'form-wrapper' do |bb|
@@ -70,7 +70,7 @@ SimpleForm.setup do |config|
 
   config.wrappers :vertical_boolean,
                   class: 'form-row' do |b|
-    b.use :html5
+    b.use :html5 # rubocop:disable Naming/VariableNumber
 
     b.wrapper class: 'form-wrapper' do |bb|
       bb.wrapper class: 'form-group' do |bbb|
@@ -86,7 +86,7 @@ SimpleForm.setup do |config|
                   item_label_class: 'form-label',
                   tag: :fieldset,
                   class: 'form-row form-fieldset' do |b|
-    b.use :html5
+    b.use :html5 # rubocop:disable Naming/VariableNumber
 
     b.wrapper :legend_tag, tag: :legend, class: 'form-legend' do |bb|
       bb.use :label_text
