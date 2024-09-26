@@ -11,6 +11,10 @@ module BeyondEssence
 
     private
 
+    def render?
+      @text.present?
+    end
+
     def before_render
       set_base_html_options
     end
