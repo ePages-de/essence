@@ -4,7 +4,7 @@ module BeyondEssence
   class IconComponent < ApplicationComponent
     attr_reader :path, :html_options
 
-    NAME_OPTIONS = get_directory_icons(BeyondEssence::Engine.root.join('app/assets/images/beyond_essence/components/icon_component')).sort.freeze
+    NAME_OPTIONS = get_directory_file_names(images_directory, :svg).sort.freeze
 
     def initialize(name:,
                    **html_options)
@@ -19,7 +19,7 @@ module BeyondEssence
     end
 
     def set_path
-      @path = "beyond_essence/components/icon_component/#{@name}.svg"
+      @path = "#{assets_path}/#{@name}.svg"
     end
   end
 end
