@@ -1,0 +1,28 @@
+<% content_for :title do %>
+  <%= 'Adiosi' %>
+<% end %>
+
+<%= render BeyondEssence::ActionBarComponent.new do |action_bar| %>
+  <% action_bar.with_left_button name: 'Open website view', variant: :danger do |link| %>
+    <% link.with_left_icon 'trash' %>
+  <% end %>
+  <% action_bar.with_left_link name: 'Recommended apps' do |link| %>
+    <% link.with_left_icon 'grid_2' %>
+  <% end %>
+  <% action_bar.with_right_button name: 'Open website view', variant: :secondary do |link| %>
+    <% link.with_left_icon 'eye' %>
+  <% end %>
+  <% action_bar.with_right_link name: 'Recommended apps', variant: :danger do |link| %>
+    <% link.with_left_icon 'grid_2' %>
+  <% end %>
+<% end %>
+
+<%= render BeyondEssence::TooltipComponent.new(text: 'Qué pasa loko!') %>
+
+<%= render BeyondEssence::CardComponent.new(headline: 'Oli') do %>
+  <h1>Adiosi</h1>
+<% end %>
+
+<%= render BeyondEssence::ButtonComponent.new(name: 'Oli', variant: :secondary) do |button| %>
+  <% button.with_left_icon 'eye' %>
+<% end %>
