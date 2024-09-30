@@ -7,7 +7,6 @@ require 'inline_svg'
 require 'sassc-rails'
 require 'simple_form'
 require 'stimulus-rails'
-require 'turbo-rails'
 require 'view_component'
 
 require 'beyond_essence/version'
