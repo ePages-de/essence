@@ -2,7 +2,7 @@
 
 module BeyondEssence
   class IconComponent < ApplicationComponent
-    attr_reader :path, :html_options
+    attr_reader :file, :html_options
 
     NAME_OPTIONS = get_directory_file_names(images_directory, :svg).sort.freeze
 
@@ -15,11 +15,11 @@ module BeyondEssence
     private
 
     def before_render
-      set_path
+      set_file
     end
 
-    def set_path
-      @path = "#{assets_path}/#{@name}.svg"
+    def set_file
+      @file = "#{assets_path}/#{@name}.svg"
     end
   end
 end
