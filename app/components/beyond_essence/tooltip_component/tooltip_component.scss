@@ -7,6 +7,8 @@
 }
 
 .tooltip {
+  display: flex;
+
   &:hover {
     .tooltip-bubble {
       display: block;
