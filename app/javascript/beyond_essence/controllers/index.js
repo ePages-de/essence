@@ -2,10 +2,11 @@
 
 import { application } from "./controllers/application"
 
-// Eager load all controllers defined in the import map under controllers/**/*_controller
-import { eagerLoadControllersFrom } from "@hotwired/stimulus-loading"
-eagerLoadControllersFrom("controllers", application)
+import ParagraphComponentController from 'components/beyond_essence/paragraph_component/paragraph_component_controller'
+application.register('paragraph', ParagraphComponentController)
 
-// Lazy load controllers as they appear in the DOM (remember not to preload controllers in import map!)
-// import { lazyLoadControllersFrom } from "@hotwired/stimulus-loading"
-// lazyLoadControllersFrom("controllers", application)
+import ClipboardCopyComponentController from 'components/beyond_essence/clipboard_copy_component/clipboard_copy_component_controller'
+application.register('clipboard-copy', ClipboardCopyComponentController)
+
+import TooltipComponentController from 'components/beyond_essence/tooltip_component/tooltip_component_controller'
+application.register('tooltip', TooltipComponentController)
