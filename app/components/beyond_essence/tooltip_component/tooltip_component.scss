@@ -9,12 +9,6 @@
 .tooltip {
   display: flex;
 
-  &:hover {
-    .tooltip-bubble {
-      display: block;
-    }
-  }
-
   &-arrow {
     background: var(--tooltip-background);
     height: 10px;
@@ -49,11 +43,21 @@
       transform: translateY(-50%);
       width: 10px;
     }
+
+    &:hover {
+      display: block;
+    }
   }
 
   &-icon {
     fill: var(--tooltip-icon);
     height: 14px;
     width: 14px;
+
+    &:hover {
+      ~ .tooltip-bubble {
+        display: block;
+      }
+    }
   }
 }
