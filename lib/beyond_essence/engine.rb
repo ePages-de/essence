@@ -10,6 +10,7 @@ module BeyondEssence
 
     initializer 'beyond_essence.assets' do |app|
       app.config.assets.paths << root.join('app/javascript')
+      app.config.assets.paths << root.join('vendor/javascript')
       app.config.assets.precompile += ['beyond_essence_manifest']
     end
 
