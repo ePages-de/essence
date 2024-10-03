@@ -107,6 +107,11 @@ SimpleForm.setup do |config|
     check_boxes: :vertical_collection,
     radio_buttons: :vertical_collection,
     select: :vertical_select,
-    country: :vertical_select
+    country: :vertical_select,
+    toggle: :vertical_boolean
   }
+
+  # Namespaces where SimpleForm should look for custom input classes that
+  # override default inputs.
+  config.custom_inputs_namespaces << 'BeyondEssence'
 end
