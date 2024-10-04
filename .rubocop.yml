@@ -33,3 +33,4 @@ Style/WordArray:
 Metrics/ParameterLists:
   Exclude:
     - 'app/components/**/*'
+    - 'spec/components/previews/**/*'
