@@ -33,11 +33,13 @@
   cursor: pointer;
   display: inline-flex;
   font-weight: bold;
+  height: fit-content;
   line-height: 1;
   padding: var(--button-horizontal-padding) 12px;
   text-decoration: none;
   transition: all 0.4s cubic-bezier(0, 0, 0.1, 1);
   width: fit-content;
+  white-space: nowrap;
 
   &-primary {
     background: var(--button-primary-background);

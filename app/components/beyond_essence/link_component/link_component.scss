@@ -13,8 +13,10 @@
   border: 0;
   cursor: pointer;
   display: inline-flex;
+  height: fit-content;
   padding: 0;
   text-decoration: none;
+  white-space: nowrap;
 
   &-primary {
     color: var(--primaryLink-color);
