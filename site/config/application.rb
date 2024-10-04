@@ -43,8 +43,11 @@ module Site
     # Don't generate system test files.
     config.generators.system_tests = nil
 
-    config.lookbook.project_name    = "Beyond Essence v#{BeyondEssence::VERSION}"
-    config.lookbook.component_paths = [BeyondEssence::Engine.root.join('app/components')]
-    config.lookbook.preview_paths   = [BeyondEssence::Engine.root.join('spec/components/previews')]
+    config.lookbook.project_name                     = "Beyond Essence v#{BeyondEssence::VERSION}"
+    config.lookbook.component_paths                  = [BeyondEssence::Engine.root.join('app/components')]
+    config.lookbook.preview_paths                    = [BeyondEssence::Engine.root.join('spec/components/previews')]
+    config.lookbook.markdown_options.disable_indented_code_blocks = false
+    config.lookbook.preview_inspector.drawer_panels  = [:notes, :params, :source, '*']
+    config.lookbook.preview_embeds.policy            = 'ALLOWALL'
   end
 end
