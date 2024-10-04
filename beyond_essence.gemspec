@@ -17,17 +17,20 @@ Gem::Specification.new do |spec|
     'ksalazar@epages.com',
     'abernardi@epages.com'
   ]
-  spec.homepage    = 'https://example.com'
-  spec.summary     = 'Summary of BeyondEssence.'
-  spec.description = 'Description of BeyondEssence.'
-  spec.license     = 'MIT'
+  spec.homepage    = 'https://github.com/ePages-de/beyond_essence'
+  spec.summary     = "ViewComponents for ePages's online shop software Beyond"
+  spec.description = <<-DESC
+    Beyond Essence is an open-source framework that provides ViewComponents,
+    form styles and other functionality for appsdesigned and developed for the
+    online shop software Beyond
+  DESC
+  spec.license = 'MIT'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the "allowed_push_host"
   # to allow pushing to a single host or delete this section to allow pushing to any host.
-  spec.metadata['allowed_push_host']     = 'https://example.com'
+  spec.metadata['allowed_push_host']     = 'https://rubygems.org'
   spec.metadata['homepage_uri']          = spec.homepage
-  spec.metadata['source_code_uri']       = 'https://example.com'
-  spec.metadata['changelog_uri']         = 'https://example.com'
+  spec.metadata['source_code_uri']       = 'https://github.com/ePages-de/beyond_essence'
   spec.metadata['rubygems_mfa_required'] = 'true'
 
   spec.files = Dir.chdir(File.expand_path(__dir__)) do
