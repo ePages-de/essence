@@ -1,5 +1,14 @@
 # frozen_string_literal: true
 
+require 'country_select'
+require 'gretel'
+require 'importmap-rails'
+require 'inline_svg'
+require 'sassc-rails'
+require 'simple_form'
+require 'stimulus-rails'
+require 'view_component'
+
 module BeyondEssence
   class Engine < ::Rails::Engine
     isolate_namespace BeyondEssence
@@ -7,6 +16,14 @@ module BeyondEssence
     config.autoload_paths = [
       "#{root}/lib"
     ]
+
+    config.generators.test_framework = :rspec
+
+    config.view_component.generate.sidecar             = true
+    config.view_component.generate.stimulus_controller = true
+    config.view_component.generate.locale              = true
+    config.view_component.generate.preview             = false
+    config.view_component.component_parent_class       = 'ApplicationComponent'
 
     initializer 'beyond_essence.assets' do |app|
       app.config.assets.paths << root.join('app/javascript')
