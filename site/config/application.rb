@@ -42,5 +42,9 @@ module Site
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.lookbook.project_name    = "Beyond Essence v#{BeyondEssence::VERSION}"
+    config.lookbook.component_paths = [BeyondEssence::Engine.root.join('app/components')]
+    config.lookbook.preview_paths   = [BeyondEssence::Engine.root.join('spec/components/previews')]
   end
 end
