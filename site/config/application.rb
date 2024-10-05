@@ -43,11 +43,30 @@ module Site
     # Don't generate system test files.
     config.generators.system_tests = nil
 
-    config.lookbook.project_name                     = "Beyond Essence v#{BeyondEssence::VERSION}"
-    config.lookbook.component_paths                  = [BeyondEssence::Engine.root.join('app/components')]
-    config.lookbook.preview_paths                    = [BeyondEssence::Engine.root.join('spec/components/previews')]
-    config.lookbook.markdown_options.disable_indented_code_blocks = false
-    config.lookbook.preview_inspector.drawer_panels  = [:notes, :params, :source, '*']
-    config.lookbook.preview_embeds.policy            = 'ALLOWALL'
+    if config.respond_to?(:lookbook)
+      asset_panel_config = {
+        label: 'Assets',
+        partial: 'lookbook/panels/assets',
+        locals: lambda do |data|
+          assets = data.preview.components.flat_map do |component|
+            asset_files = Dir[BeyondEssence::Engine.root.join('app/components',
+                                                              "#{component.relative_file_path.to_s.chomp('.rb')}/*.{scss,js}")]
+            asset_files.map do |path_str|
+              path = Pathname(path_str)
+              { path:, language: path.extname.delete('.') }
+            end
+          end
+
+          { assets: }
+        end
+      }
+      Lookbook.define_panel('assets', asset_panel_config)
+
+      config.lookbook.project_name                     = "Beyond Essence v#{BeyondEssence::VERSION}"
+      config.lookbook.component_paths                  = [BeyondEssence::Engine.root.join('app/components')]
+      config.lookbook.preview_paths                    = [BeyondEssence::Engine.root.join('spec/components/previews')]
+      config.lookbook.preview_inspector.drawer_panels  = [:params, :source, :assets]
+      config.lookbook.preview_embeds.policy            = 'ALLOWALL'
+    end
   end
 end

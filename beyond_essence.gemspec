@@ -34,7 +34,7 @@ Gem::Specification.new do |spec|
   spec.metadata['rubygems_mfa_required'] = 'true'
 
   spec.files = Dir.chdir(File.expand_path(__dir__)) do
-    Dir['{app,config,lib}/**/*', 'LICENSE', 'Rakefile', 'README.md']
+    Dir['{app,config,lib,vendor}/**/*', 'LICENSE', 'Rakefile', 'README.md']
   end
 
   spec.required_ruby_version = '>= 3.3'
