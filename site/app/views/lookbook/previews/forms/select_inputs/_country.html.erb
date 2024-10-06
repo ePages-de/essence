@@ -1,0 +1,11 @@
+<%= simple_fields_for nil do |f| %>
+  <%= f.input :country,
+              as: :country,
+              required:,
+              label: label ? nil : false,
+              hint: hint ? nil : false,
+              prompt: prompt ? :translate : false,
+              disabled:,
+              error: error ? t('simple_form.errors.country') : false,
+              selected: error ? t('simple_form.values.country') : false %>
+<% end %>

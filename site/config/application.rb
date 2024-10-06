@@ -24,9 +24,6 @@ module Site
   class Application < Rails::Application
     config.load_defaults Rails::VERSION::STRING.to_f
 
-    # For compatibility with applications that use this config
-    config.action_controller.include_all_helpers = false
-
     # Please, add to the `ignore` list any other `lib` subdirectories that do
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
     # Common ones are `templates`, `generators`, or `middleware`, for example.
@@ -51,7 +48,8 @@ module Site
         end
       end
 
-      asset_panel_config = {
+      Lookbook.define_panel(
+        'assets',
         label: 'Assets',
         partial: 'lookbook/panels/assets',
         hotkey: 'a',
@@ -64,8 +62,7 @@ module Site
 
           { assets: }
         end
-      }
-      Lookbook.define_panel('assets', asset_panel_config)
+      )
 
       config.lookbook.project_name                     = "Beyond Essence v#{BeyondEssence::VERSION}"
       config.lookbook.component_paths                  = [BeyondEssence::Engine.root.join('app/components')]

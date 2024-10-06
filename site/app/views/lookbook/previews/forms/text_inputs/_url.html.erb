@@ -1,0 +1,11 @@
+<%= simple_fields_for nil do |f| %>
+  <%= f.input :url,
+              as: :url,
+              required:,
+              label: label ? nil : false,
+              hint: hint ? nil : false,
+              placeholder: placeholder ? nil : false,
+              disabled:,
+              error: error ? t('simple_form.errors.url') : false,
+              input_html: { value: disabled || error ? t('simple_form.values.url') : false } %>
+<% end %>
