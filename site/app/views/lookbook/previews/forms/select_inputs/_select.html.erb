@@ -6,6 +6,6 @@
               hint: hint ? nil : false,
               prompt: prompt ? :translate : false,
               disabled:,
-              error: error ? t('simple_form.errors.select') : false,
-              selected: disabled || error ? t('simple_form.values.select') : false %>
+              error: error ? t('simple_form.errors.select') : nil,
+              selected: disabled || error ? t('simple_form.values.select') : nil %>
 <% end %>

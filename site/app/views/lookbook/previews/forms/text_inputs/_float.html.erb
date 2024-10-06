@@ -6,6 +6,6 @@
               hint: hint ? nil : false,
               placeholder: placeholder ? nil : false,
               disabled:,
-              error: error ? t('simple_form.errors.float') : false,
-              input_html: { value: disabled || error ? t('simple_form.values.float') : false } %>
+              error: error ? t('simple_form.errors.float') : nil,
+              input_html: { value: disabled || error ? t('simple_form.values.float') : nil } %>
 <% end %>
