@@ -44,17 +44,22 @@ module Site
     config.generators.system_tests = nil
 
     if config.respond_to?(:lookbook)
+      def fetch_asset_files(data)
+        data.preview.components.flat_map do |component|
+          Dir[BeyondEssence::Engine.root.join('app/components',
+                                              "#{component.relative_file_path.to_s.chomp('.rb')}/*.{scss,js}")]
+        end
+      end
+
       asset_panel_config = {
         label: 'Assets',
         partial: 'lookbook/panels/assets',
+        hotkey: 'a',
+        disabled: ->(data) { fetch_asset_files(data).empty? },
         locals: lambda do |data|
-          assets = data.preview.components.flat_map do |component|
-            asset_files = Dir[BeyondEssence::Engine.root.join('app/components',
-                                                              "#{component.relative_file_path.to_s.chomp('.rb')}/*.{scss,js}")]
-            asset_files.map do |path_str|
-              path = Pathname(path_str)
-              { path:, language: path.extname.delete('.') }
-            end
+          assets = fetch_asset_files(data).map do |path_str|
+            path = Pathname(path_str)
+            { path:, language: path.extname.delete('.') }
           end
 
           { assets: }
@@ -67,6 +72,13 @@ module Site
       config.lookbook.preview_paths                    = [BeyondEssence::Engine.root.join('spec/components/previews')]
       config.lookbook.preview_inspector.drawer_panels  = [:params, :source, :assets]
       config.lookbook.preview_embeds.policy            = 'ALLOWALL'
+      config.view_component.default_preview_layout     = 'lookbook'
+      config.lookbook.preview_display_options          = {
+        wrapper: [
+          'background',
+          'card'
+        ]
+      }
     end
   end
 end
