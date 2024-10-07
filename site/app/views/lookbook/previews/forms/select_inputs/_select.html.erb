@@ -1,6 +1,6 @@
 <%= simple_fields_for nil do |f| %>
   <%= f.input :select,
-              collection: collection_for(:select),
+              collection: [['Male', 'male'], ['Female', 'female'], ['Other', 'other']],
               required:,
               label: label ? nil : false,
               hint: hint ? nil : false,
