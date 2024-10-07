@@ -37,6 +37,27 @@
     > [!IMPORTANT]
     > Any `javascript_import_module_tag` should come after `javascript_importmap_tags` declaration, that's why `<%= yield :head %>` is added after.
 
+## Component preview
+
+Beyond Essence comes with a Rails application that uses [Lookbook](https://lookbook.build/). By running it you can preview the components and see possibilities that Beyond Essence offers.
+
+> [!NOTE]
+> Currently, the Lookbook app is in an early stage and is still under development. It does not have a preview of all the components but of most of them.
+
+To run the Lookbook app, follow these steps:
+
+1. Change directory to `site`, the Lookbook project's folder:
+
+    ```bash
+    cd site
+    ```
+
+2. Start the web server:
+
+    ```bash
+    bin/rails server
+    ```
+
 ## Contributing
 
 Please see [CONTRIBUTING](https://github.com/ePages-de/beyond_essence/blob/main/CONTRIBUTING.md).
