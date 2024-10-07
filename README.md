@@ -35,18 +35,18 @@
     ```
 
     > [!IMPORTANT]
-    > Any `javascript_import_module_tag` should come after `javascript_importmap_tags` declaration, that's why `<%= yield :head %>` is added after.
+    > Any `javascript_import_module_tag` must come after the `javascript_importmap_tags` declaration, that's why `<%= yield :head %>` is placed after this declaration. See [`importmap-rails` gem](https://github.com/rails/importmap-rails?tab=readme-ov-file#selectively-importing-modules).
 
 ## Component preview
 
-Beyond Essence comes with a Rails application that uses [Lookbook](https://lookbook.build/). By running it you can preview the components and see possibilities that Beyond Essence offers.
+Beyond Essence includes a Rails application that uses [Lookbook](https://lookbook.build/). By running this app, you can preview the components and explore the possibilities that Beyond Essence offers.
 
 > [!NOTE]
 > Currently, the Lookbook app is in an early stage and is still under development. It does not have a preview of all the components but of most of them.
 
 To run the Lookbook app, follow these steps:
 
-1. Change directory to `site`, the Lookbook project's folder:
+1. Change directory to `site`, which is the Lookbook project's folder:
 
     ```bash
     cd site

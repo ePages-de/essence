@@ -15,16 +15,16 @@ We love pull requests from everyone. Here are some ways you can contribute:
 ## Submitting an Issue
 
 * We use the [GitHub issue tracker][issues] to track bugs and features.
-* Before submitting a bug report or feature request, check to make sure it
-  hasn't already been submitted.
-* When submitting a bug report, please include a [Gist][gist] that includes a
-  stack trace and any details that may be necessary to reproduce the bug,
-  including your gem version, Ruby version, and operating system. Ideally, a bug
-  report should include a pull request with failing specs.
+* Before submitting a bug report or feature request, check to ensure it hasn't
+  already been submitted.
+* When submitting a bug report, please include a [Gist][gist] with a stack trace
+  and any details necessary to reproduce the bug, including your gem version,
+  Ruby version, and operating system. Ideally, a bug report should include a
+  pull request with failing specs.
 
 ## Cleaning up issues
 
-* Issues that have no response from the submitter will be closed after 30 days.
+* Issues with no response from the submitter will be closed after 30 days.
 * Issues will be closed once they're assumed to be fixed or answered. If the
   maintainer is wrong, it can be opened again.
 * If your issue is closed by mistake, please understand and explain the issue.
@@ -42,8 +42,8 @@ We love pull requests from everyone. Here are some ways you can contribute:
 
 * Please add tests if you changed code. Contributions without tests won't be
   accepted.
-* If you don't know how to add tests, please put in a PR and leave a comment
-  asking for help. We love helping!
+* If you're unsure how to add tests, submit a PR and leave a comment asking for
+  help. We love to assist!
 * Please don't update the Gem version.
 
 Inspired by https://github.com/thoughtbot/factory_bot/blob/main/CONTRIBUTING.md
