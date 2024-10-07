@@ -24,6 +24,7 @@ group :development, :test do
 end
 
 group :test do
+  gem 'brakeman'
   gem 'capybara'
   gem 'selenium-webdriver'
 end
