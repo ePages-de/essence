@@ -34,8 +34,8 @@
     </html>
     ```
 
-    > [!IMPORTANT]
-    > Any `javascript_import_module_tag` must come after the `javascript_importmap_tags` declaration, that's why `<%= yield :head %>` is placed after this declaration. See [`importmap-rails` gem](https://github.com/rails/importmap-rails?tab=readme-ov-file#selectively-importing-modules).
+> [!IMPORTANT]
+> Any `javascript_import_module_tag` must come after the `javascript_importmap_tags` declaration, that's why `<%= yield :head %>` is placed after this declaration. See [`importmap-rails` gem](https://github.com/rails/importmap-rails?tab=readme-ov-file#selectively-importing-modules).
 
 ## Component preview
 
