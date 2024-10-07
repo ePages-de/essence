@@ -21,11 +21,15 @@ module BeyondEssence
         ),
         data: {
           controller: 'paragraph',
-          paragraph_external_icon_value: html_escape(render(IconComponent.new(name: 'arrow_up_right_from_square'))).strip
+          paragraph_external_icon_value:
         }
       }
 
       @html_options = merge_options(base_html_options, @html_options)
+    end
+
+    def paragraph_external_icon_value
+      html_escape(render(IconComponent.new(name: 'arrow_up_right_from_square'))).strip
     end
   end
 end
