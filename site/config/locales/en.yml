@@ -13,6 +13,7 @@ en:
       select: 'Not a valid gender.'
       string: 'Enter a valid name.'
       tel: 'Enter a valid phone number.'
+      toggle: 'You must enable email notifications to receive updates.'
       url: 'Enter a valid URL.'
     values:
       country: 'ES'
@@ -39,6 +40,7 @@ en:
         select: 'Gender'
         string: 'Name'
         tel: 'Phone number'
+        toggle: 'Enable email notifications'
         url: 'Website URL'
     hints:
       defaults:
