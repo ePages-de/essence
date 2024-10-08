@@ -1,4 +1,4 @@
-# Contributing to Beyond Essence
+# Contributing to Essence
 
 We love pull requests from everyone. Here are some ways you can contribute:
 
@@ -48,9 +48,9 @@ We love pull requests from everyone. Here are some ways you can contribute:
 
 Inspired by https://github.com/thoughtbot/factory_bot/blob/main/CONTRIBUTING.md
 
-[issues]: https://github.com/ePages-de/beyond_essence/issues
+[issues]: https://github.com/ePages-de/essence/issues
 [gist]: https://gist.github.com/
-[repo]: https://github.com/ePages-de/beyond_essence/tree/main
+[repo]: https://github.com/ePages-de/essence/tree/main
 [fork]: https://help.github.com/articles/fork-a-repo/
 [branch]: https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/
 [pr]: https://help.github.com/articles/using-pull-requests/

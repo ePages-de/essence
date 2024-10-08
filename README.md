@@ -1,14 +1,14 @@
-# Beyond Essence
+# Essence
 
-![Gem Version](https://img.shields.io/gem/v/beyond_essence)
-![License](https://img.shields.io/github/license/ePages-de/beyond_essence)
+![Gem Version](https://img.shields.io/gem/v/essence)
+![License](https://img.shields.io/github/license/ePages-de/essence)
 
 ## Installation
 
 1. Add this line to your application's Gemfile:
 
     ```ruby
-    gem 'beyond_essence'
+    gem 'essence'
     ```
 
 1. Execute the following command:
@@ -23,13 +23,13 @@
     <!DOCTYPE html>
     <html>
       <head>
-        <%= stylesheet_link_tag 'beyond_essence/application', 'data-turbo-track': 'reload' %>
-        <%= javascript_importmap_tags 'beyond_essence/application' %>
+        <%= stylesheet_link_tag 'essence/application', 'data-turbo-track': 'reload' %>
+        <%= javascript_importmap_tags 'essence/application' %>
         <%= yield :head %>
       </head>
 
       <body>
-        <%= render template: 'beyond_essence/body' %>
+        <%= render template: 'essence/body' %>
       </body>
     </html>
     ```
@@ -39,7 +39,7 @@
 
 ## Component preview
 
-Beyond Essence includes a Rails application that uses [Lookbook](https://lookbook.build/). By running this app, you can preview the components and explore the possibilities that Beyond Essence offers.
+Essence includes a Rails application that uses [Lookbook](https://lookbook.build/). By running this app, you can preview the components and explore the possibilities that Essence offers.
 
 > [!NOTE]
 > Currently, the Lookbook app is in an early stage and is still under development. It does not have a preview of all the components but of most of them.
@@ -60,11 +60,11 @@ To run the Lookbook app, follow these steps:
 
 ## Contributing
 
-Please see [CONTRIBUTING](https://github.com/ePages-de/beyond_essence/blob/main/CONTRIBUTING.md).
+Please see [CONTRIBUTING](https://github.com/ePages-de/essence/blob/main/CONTRIBUTING.md).
 
 ## License
 
-Beyond Essence is Copyright © 2024 ePages GmbH. It is free software, and may be redistributed under the terms specified in the [LICENSE](https://github.com/ePages-de/beyond_essence/blob/main/LICENSE) file.
+Essence is Copyright © 2024 ePages GmbH. It is free software, and may be redistributed under the terms specified in the [LICENSE](https://github.com/ePages-de/essence/blob/main/LICENSE) file.
 
 ## About ePages
 

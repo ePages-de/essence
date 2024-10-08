@@ -43,8 +43,8 @@ module Site
     if config.respond_to?(:lookbook)
       def fetch_asset_files(data)
         data.preview.components.flat_map do |component|
-          Dir[BeyondEssence::Engine.root.join('app/components',
-                                              "#{component.relative_file_path.to_s.chomp('.rb')}/*.{scss,js}")]
+          Dir[Essence::Engine.root.join('app/components',
+                                        "#{component.relative_file_path.to_s.chomp('.rb')}/*.{scss,js}")]
         end
       end
 
@@ -64,8 +64,8 @@ module Site
         end
       )
 
-      config.lookbook.project_name                     = "Beyond Essence v#{BeyondEssence::VERSION}"
-      config.lookbook.component_paths                  = [BeyondEssence::Engine.root.join('app/components')]
+      config.lookbook.project_name                     = "Essence v#{Essence::VERSION}"
+      config.lookbook.component_paths                  = [Essence::Engine.root.join('app/components')]
       config.lookbook.preview_paths                    = [Rails.root.join('app/previews')]
       config.lookbook.preview_inspector.drawer_panels  = [:params, :source, :assets]
       config.lookbook.preview_embeds.policy            = 'ALLOWALL'

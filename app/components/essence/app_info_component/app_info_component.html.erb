@@ -1,0 +1,19 @@
+<div <%= tag.attributes **html_options %>>
+  <div>
+    <h2 class="app-info-headline"><%= headline %></h3>
+    <% if subheadline? %>
+      <h3 class="app-info-subheadline"><%= subheadline %></h4>
+    <% end %>
+    <% if content? %>
+      <%= render Essence::ParagraphComponent.new(class: 'app-info-text', style: 'margin: 30px 0;') do %>
+        <%= content %>
+      <% end %>
+    <% end %>
+    <% if link_text? && link_url? %>
+      <%= render Essence::LinkComponent.new(name: link_text, url: link_url, display_as: :button) %>
+    <% end %>
+  </div>
+  <div>
+    <%= image_tag 'logo.png', class: 'app-info-logo' %>
+  </div>
+</div>

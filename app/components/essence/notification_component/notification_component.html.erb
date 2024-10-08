@@ -1,0 +1,8 @@
+<div <%= tag.attributes **html_options %>>
+  <div class="notification-indicator">
+    <%= render Essence::IconComponent.new(name: icon, class: 'notification-icon') %>
+  </div>
+  <div class="notification-body">
+    <%= content %>
+  </div>
+</div>
