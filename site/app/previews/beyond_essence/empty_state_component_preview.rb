@@ -2,8 +2,6 @@
 
 module BeyondEssence
   #
-  # @hidden
-  #
   # @logical_path components
   #
   # @display wrapper card
@@ -14,7 +12,7 @@ module BeyondEssence
     # @param body
     # @param link_text
     #
-    def default(image_path: 'element/empty_state/shirt.svg',
+    def default(image_path: 'lookbook/previews/beyond_essence/empty_state_component/image.svg',
                 headline: 'Headline text',
                 body: 'Body text',
                 link_text: 'Button text',
