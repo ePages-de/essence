@@ -23,7 +23,7 @@ module BeyondEssence
     config.view_component.generate.stimulus_controller = true
     config.view_component.generate.locale              = true
     config.view_component.generate.preview             = true
-    config.view_component.preview_paths               << root.join('spec/components/previews')
+    config.view_component.preview_paths               << root.join('site/app/previews')
     config.view_component.component_parent_class       = 'ApplicationComponent'
 
     initializer 'beyond_essence.assets' do |app|
