@@ -48,7 +48,7 @@ module Site
         end
       end
 
-      Lookbook.define_panel(
+      Lookbook.add_panel(
         'assets',
         label: 'Assets',
         partial: 'lookbook/panels/assets',
