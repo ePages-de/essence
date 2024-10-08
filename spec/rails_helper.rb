@@ -16,8 +16,6 @@ require 'view_component/test_helpers'
 require 'view_component/system_test_helpers'
 require 'capybara/rspec'
 
-require 'rspec/github' if ENV['GITHUB_ACTIONS'] == 'true'
-
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
 # run as spec files by default. This means that files in spec/support that end
@@ -44,8 +42,6 @@ RSpec.configure do |config|
   config.include ViewComponent::TestHelpers,       type: :component
   config.include ViewComponent::SystemTestHelpers, type: :component
   config.include Capybara::RSpecMatchers,          type: :component
-
-  config.add_formatter RSpec::Github::Formatter if ENV['GITHUB_ACTIONS'] == 'true'
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_paths = [
