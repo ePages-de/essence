@@ -10,6 +10,7 @@
 Rails/OutputSafety:
   Exclude:
     - 'spec/components/**/*'
+    - 'site/app/previews/**/*'
 
 # Offense count: 12
 # This cop supports safe autocorrection (--autocorrect).
@@ -18,4 +19,5 @@ Rails/OutputSafety:
 Layout/LineLength:
   Exclude:
     - 'spec/components/**/*'
+    - 'site/app/previews/**/*'
     - 'spec/support/**/*'

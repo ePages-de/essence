@@ -36,4 +36,5 @@ Style/WordArray:
 Metrics/ParameterLists:
   Exclude:
     - 'app/components/**/*'
+    - 'site/app/previews/**/*'
     - 'spec/components/previews/**/*'

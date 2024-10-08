@@ -25,6 +25,9 @@ end
 
 group :test do
   gem 'brakeman'
+
   gem 'capybara'
   gem 'selenium-webdriver'
+
+  gem 'rspec-github', require: false
 end
