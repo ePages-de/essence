@@ -73,6 +73,7 @@
     border: var(--button-outline-border-width) solid var(--button-outline-border-color);
     border-bottom-width: var(--button-outline-borderBottom-width);
     color: var(--button-outline-text);
+    padding-top: calc(var(--button-horizontal-padding) - 1px);
 
     &:hover {
       background-color: var(--button-outline-background-hover);
@@ -95,6 +96,7 @@
 
   &:disabled {
     background: var(--button-disabled-background);
+    border-color: var(--button-disabled-background);
     border-bottom-color: var(--button-disabled-borderBottom-color);
     color: var(--button-disabled-text);
     cursor: default;
