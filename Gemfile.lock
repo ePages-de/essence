@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    beyond_essence (0.1.0)
+    essence (0.1.0)
       country_select (~> 9.0)
       gretel (~> 5.0)
       importmap-rails (~> 2.0)
@@ -369,7 +369,7 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
-  beyond_essence!
+  essence!
   brakeman
   capybara
   lookbook

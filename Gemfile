@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in beyond_essence.gemspec.
+# Specify your gem's dependencies in essence.gemspec.
 gemspec
 
 gem 'puma'

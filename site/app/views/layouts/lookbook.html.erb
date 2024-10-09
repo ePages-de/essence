@@ -7,8 +7,8 @@
 
     <%= stylesheet_link_tag 'lookbook', 'data-turbo-track': 'reload' %>
 
-    <%= stylesheet_link_tag 'beyond_essence/application', 'data-turbo-track': 'reload' %>
-    <%= javascript_importmap_tags 'beyond_essence/application' %>
+    <%= stylesheet_link_tag 'essence/beyond', 'data-turbo-track': 'reload' %>
+    <%= javascript_importmap_tags 'essence/application' %>
 
     <%= yield :head %>
   </head>
@@ -16,7 +16,7 @@
   <body>
     <div class="wrapper">
       <% if params.dig(:lookbook, :display, :wrapper) == 'card' %>
-        <%= render BeyondEssence::CardComponent.new do %>
+        <%= render Essence::CardComponent.new do %>
           <%= yield %>
         <% end %>
       <% else %>
