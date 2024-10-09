@@ -20,7 +20,7 @@ module Essence
                 link_text: 'Copy',
                 link_confirmation_text: 'Copied!')
       render Essence::ClipboardCopyComponent.new(input_name:, input_label:, input_value:, link_text:,
-                                                       link_confirmation_text:)
+                                                 link_confirmation_text:)
     end
   end
 end
