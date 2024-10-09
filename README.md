@@ -23,13 +23,13 @@
     <!DOCTYPE html>
     <html>
       <head>
-        <%= stylesheet_link_tag 'essence/application', 'data-turbo-track': 'reload' %>
+        <%= stylesheet_link_tag 'essence/beyond', 'data-turbo-track': 'reload' %>
         <%= javascript_importmap_tags 'essence/application' %>
         <%= yield :head %>
       </head>
 
       <body>
-        <%= render template: 'essence/body' %>
+        <%= render template: 'essence/beyond/body' %>
       </body>
     </html>
     ```
