@@ -7,7 +7,6 @@ module Essence
   # @display wrapper card
   #
   class ParagraphComponentPreview < ViewComponent::Preview
-    # @after_render :wrangle_html
     def default
       html_content = <<~HTML
         <p>
@@ -34,18 +33,6 @@ module Essence
       render Essence::ParagraphComponent.new do
         html_content.html_safe
       end
-    end
-
-    private
-
-    def wrangle_html(html, context)
-      puts '+' * 100
-      puts html
-      puts '-' * 100
-      puts context
-      puts '+' * 100
-
-      raw html.html_safe
     end
   end
 end
