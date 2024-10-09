@@ -39,7 +39,7 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = '>= 3.3'
 
-  spec.add_dependency 'country_select',  '~> 9.0'
+  spec.add_dependency 'country_select',  '>= 9', '< 11'
   spec.add_dependency 'gretel',          '~> 5.0'
   spec.add_dependency 'importmap-rails', '~> 2.0'
   spec.add_dependency 'inline_svg',      '~> 1.10'
