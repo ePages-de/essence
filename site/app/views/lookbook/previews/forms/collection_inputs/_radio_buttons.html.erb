@@ -1,0 +1,12 @@
+<%= simple_fields_for nil do |f| %>
+  <%= f.input :radio_buttons,
+              as: :radio_buttons,
+              collection: [[0, 'Email'], [1, 'Phone (SMS)'], [2, 'Push notification']],
+              label_method: :second,
+              value_method: :first,
+              label: label ? nil : false,
+              checked: 0,
+              disabled:,
+              required:,
+              error: error ? t('simple_form.errors.radio_buttons') : nil %>
+<% end %>

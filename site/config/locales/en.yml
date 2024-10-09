@@ -1,31 +1,70 @@
-# Files in the config/locales directory are used for internationalization and
-# are automatically loaded by Rails. If you want to use locales other than
-# English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more about the API, please read the Rails Internationalization guide
-# at https://guides.rubyonrails.org/i18n.html.
-#
-# Be aware that YAML interprets the following case-insensitive strings as
-# booleans: `true`, `false`, `on`, `off`, `yes`, `no`. Therefore, these strings
-# must be quoted to be interpreted as strings. For example:
-#
-#     en:
-#       "yes": yup
-#       enabled: "ON"
-
 en:
-  hello: "Hello world"
+  simple_form:
+    errors:
+      boolean: 'You must accept the terms and conditions.'
+      check_boxes: 'Not a valid option.'
+      country: 'Not a valid country.'
+      email: 'Enter a valid email.'
+      float: 'Enter a valid height.'
+      decimal: 'Enter a valid price.'
+      integer: 'Enter a valid age.'
+      password: 'Enter a valid password.'
+      radio_buttons: 'Not a valid option.'
+      select: 'Not a valid gender.'
+      string: 'Enter a valid name.'
+      tel: 'Enter a valid phone number.'
+      toggle: 'You must enable email notifications to receive updates.'
+      url: 'Enter a valid URL.'
+    values:
+      country: 'ES'
+      email: 'you@example'
+      float: '3.67'
+      decimal: '1234.56'
+      integer: '30.5'
+      password: 'password'
+      select: 'female'
+      string: 'John'
+      tel: '123456789'
+      url: 'https:/example.com'
+    labels:
+      defaults:
+        boolean: 'Accept terms and conditions'
+        check_boxes: 'Notifications'
+        country: 'Country'
+        decimal: 'Price'
+        email: 'Email'
+        float: 'Height'
+        integer: 'Age'
+        password: 'Password'
+        radio_buttons: 'Notifications'
+        select: 'Gender'
+        string: 'Name'
+        tel: 'Phone number'
+        toggle: 'Enable email notifications'
+        url: 'Website URL'
+    hints:
+      defaults:
+        country: 'Choose the country where you reside or operate.'
+        decimal: 'Enter the amount in dollars and cents (e.g., 1234.56).'
+        email: 'Make sure to include "@" and a domain name (e.g., ".com", ".org").'
+        float: 'Enter the height in meters and centimeters (e.g., 1.75).'
+        integer: 'Age should be a whole number without any decimal points.'
+        password: 'Password must be at least 8 characters long and contain a mix of letters and numbers.'
+        select: 'Choose a gender with which you identify.'
+        string: 'Enter your first name and last name.'
+        tel: 'Please include your country code.'
+        url: 'Include http:// or https:// in the URL.'
+    placeholders:
+      defaults:
+        decimal: '1234.56'
+        email: 'you@example.com'
+        float: '1.75'
+        integer: '30'
+        password: 'Password123!'
+        string: 'John Doe'
+        tel: '+1234567890'
+        url: 'https://www.example.com'
+    prompts:
+      defaults:
+        country: 'Select your country'
+        select: 'Select your gender'

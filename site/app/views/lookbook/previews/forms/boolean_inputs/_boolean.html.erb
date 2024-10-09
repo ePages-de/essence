@@ -1,0 +1,8 @@
+<%= simple_fields_for nil do |f| %>
+  <%= f.input :boolean,
+              as: :boolean,
+              required:,
+              label: label ? nil : false,
+              disabled:,
+              error: error ? t('simple_form.errors.boolean') : nil %>
+<% end %>

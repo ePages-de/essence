@@ -1,0 +1,13 @@
+<% if url.present? %>
+  <%= button_to url, **html_options do %>
+    <%= left_icon if left_icon? %>
+    <span><%= name %></span>
+    <%= right_icon if right_icon? %>
+  <% end %>
+<% else %>
+  <%= button_tag **html_options do %>
+    <%= left_icon if left_icon? %>
+    <span><%= name %></span>
+    <%= right_icon if right_icon? %>
+  <% end %>
+<% end %>

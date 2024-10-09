@@ -1,0 +1,16 @@
+<% content_for :action_bar do %>
+  <div <%= tag.attributes **html_options %>>
+    <div class="action-bar-wrapper">
+      <div class="action-bar-left-content">
+        <% left_components.each do |component| %>
+          <%= component %>
+        <% end %>
+      </div>
+      <div class="action-bar-right-content">
+        <% right_components.each do |component| %>
+          <%= component %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>

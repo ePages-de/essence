@@ -1,0 +1,39 @@
+:root {
+  --breadcrumb-text:       #787878;
+  --breadcrumb-link:       #787878;
+  --breadcrumb-link-hover: #525252;
+  --breadcrumb-icon:       #787878;
+}
+
+.breadcrumb {
+  font-size: 90%;
+
+  &-icon {
+    fill: var(--breadcrumb-icon);
+
+    &:first-child {
+      width: 12px;
+      height: 12px;
+      margin-right: 4px;
+    }
+
+    &:not(:first-child) {
+      width: 8px;
+      height: 8px;
+      margin: 0 10px;
+    }
+  }
+
+  &-item {
+    color: var(--breadcrumb-link);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--breadcrumb-link-hover);
+    }
+  }
+
+  &-current {
+    color: var(--breadcrumb-text);
+  }
+}

@@ -1,16 +1,33 @@
-source "https://rubygems.org"
+# frozen_string_literal: true
 
-# Specify your gem's dependencies in beyond_essence.gemspec.
+source 'https://rubygems.org'
+
+# Specify your gem's dependencies in essence.gemspec.
 gemspec
 
-gem "puma"
+gem 'puma'
 
-gem "sqlite3"
+gem 'sqlite3'
 
-gem "sprockets-rails"
-
-# Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
-gem "rubocop-rails-omakase", require: false
+gem 'sprockets-rails'
 
 # Start debugger with binding.b [https://github.com/ruby/debug]
 # gem "debug", ">= 1.0.0"
+
+gem 'lookbook'
+
+gem 'rubocop',       require: false
+gem 'rubocop-rails', require: false
+
+group :development, :test do
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'brakeman'
+
+  gem 'capybara'
+  gem 'selenium-webdriver'
+
+  gem 'rspec-github', require: false
+end
