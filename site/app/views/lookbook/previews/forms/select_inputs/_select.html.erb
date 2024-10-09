@@ -1,0 +1,11 @@
+<%= simple_fields_for nil do |f| %>
+  <%= f.input :select,
+              collection: [['Male', 'male'], ['Female', 'female'], ['Other', 'other']],
+              required:,
+              label: label ? nil : false,
+              hint: hint ? nil : false,
+              prompt: prompt ? :translate : false,
+              disabled:,
+              error: error ? t('simple_form.errors.select') : nil,
+              selected: disabled || error ? t('simple_form.values.select') : nil %>
+<% end %>

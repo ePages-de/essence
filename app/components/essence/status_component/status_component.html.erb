@@ -1,0 +1,6 @@
+<div <%= tag.attributes **html_options %>>
+  <% if bubble? %>
+    <span class="<%= class_names('status-bubble', BUBBLE_MAPPINGS[bubble]) %>"></span>
+  <% end %>
+  <%= text %>
+</div>

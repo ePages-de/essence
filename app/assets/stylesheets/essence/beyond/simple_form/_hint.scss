@@ -1,0 +1,8 @@
+.form {
+  &-hint {
+    color: var(--inputField-hint-text);
+    font-size: 13px;
+    line-height: 1.2;
+    margin-top: .25em;
+  }
+}

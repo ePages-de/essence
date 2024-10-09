@@ -6,6 +6,42 @@ on:
     branches: [ main ]
 
 jobs:
+  scan_ruby:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        env:
+          BUNDLE_GITHUB__COM: ${{ secrets.T42_BUNDLE_GITHUB__COM }}
+        with:
+          ruby-version: ruby-3.3.1
+          bundler-cache: true
+
+      - name: Scan for security vulnerabilities in Ruby dependencies
+        run: bin/brakeman --no-pager
+
+  scan_js:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        env:
+          BUNDLE_GITHUB__COM: ${{ secrets.T42_BUNDLE_GITHUB__COM }}
+        with:
+          ruby-version: ruby-3.3.1
+          bundler-cache: true
+
+      - name: Scan for security vulnerabilities in JavaScript dependencies
+        run: bin/importmap audit
+
   lint:
     runs-on: ubuntu-latest
     steps:
@@ -21,4 +57,17 @@ jobs:
       - name: Lint code for consistent style
         run: bin/rubocop -f github
 
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ruby-3.3.1
+          bundler-cache: true
+
+      - name: Run tests
+        run: bundle exec rspec --format RSpec::Github::Formatter

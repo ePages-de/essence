@@ -1,0 +1,13 @@
+.clipboard-copy {
+  align-items: end;
+  display: flex;
+
+  > *:has(.clipboard-copy-input) {
+    flex: 1;
+  }
+
+  &-link {
+    margin-left: 30px;
+    padding: 6px 0 !important;
+  }
+}

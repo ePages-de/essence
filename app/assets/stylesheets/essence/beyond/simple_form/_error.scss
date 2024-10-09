@@ -1,0 +1,27 @@
+.form {
+  &-error {
+    background-color: var(--formGroup-validation-error);
+    border-radius: var(--formGroup-validation-borderRadius);
+    color: var(--formGroup-validation-text);
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+    padding: 5px 7px;
+    position: absolute;
+    top: calc(100% + 8px);
+    z-index: 1;
+
+    &::before {
+      border: solid transparent;
+      border-bottom-color: var(--formGroup-validation-error);
+      border-width: 6px;
+      bottom: 100%;
+      content: '';
+      height: 0;
+      left: 8px;
+      pointer-events: none;
+      position: absolute;
+      width: 0;
+    }
+  }
+}

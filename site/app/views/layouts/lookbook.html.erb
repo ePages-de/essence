@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'lookbook', 'data-turbo-track': 'reload' %>
+
+    <%= stylesheet_link_tag 'essence/beyond', 'data-turbo-track': 'reload' %>
+    <%= javascript_importmap_tags 'essence/application' %>
+
+    <%= yield :head %>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <% if params.dig(:lookbook, :display, :wrapper) == 'card' %>
+        <%= render Essence::CardComponent.new do %>
+          <%= yield %>
+        <% end %>
+      <% else %>
+        <%= yield %>
+      <% end %>
+    </div>
+  </body>
+</html>
