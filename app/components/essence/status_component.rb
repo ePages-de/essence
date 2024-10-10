@@ -39,7 +39,10 @@ module Essence
     private
 
     def before_render
-      set_base_html_options
+      set_base_html_options(
+        'status',
+        VARIANT_MAPPINGS[@variant]
+      )
     end
 
     def render?
@@ -50,17 +53,6 @@ module Essence
       define_method(:"#{method_name}?") do
         instance_variable_get(:"@#{method_name}").present?
       end
-    end
-
-    def set_base_html_options
-      base_html_options = {
-        class: class_names(
-          'status',
-          VARIANT_MAPPINGS[@variant]
-        )
-      }
-
-      @html_options = merge_options(base_html_options, @html_options)
     end
   end
 end

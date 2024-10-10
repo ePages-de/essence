@@ -27,17 +27,7 @@ module Essence
 
     def before_render
       content # Used to call the block and populate the columns
-      set_base_html_options
-    end
-
-    def set_base_html_options
-      base_html_options = {
-        class: class_names(
-          'table'
-        )
-      }
-
-      @html_options = merge_options(base_html_options, @html_options)
+      set_base_html_options('table')
     end
   end
 end

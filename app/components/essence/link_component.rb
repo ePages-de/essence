@@ -41,18 +41,10 @@ module Essence
     private
 
     def before_render
-      set_base_html_options
-    end
-
-    def set_base_html_options
-      base_html_options = {
-        class: class_names(
-          @display_as.to_s,
-          VARIANT_MAPPINGS.dig(@display_as.to_sym, @variant.to_sym)
-        )
-      }
-
-      @html_options = merge_options(base_html_options, @html_options)
+      set_base_html_options(
+        @display_as.to_s,
+        VARIANT_MAPPINGS.dig(@display_as.to_sym, @variant.to_sym)
+      )
     end
   end
 end

@@ -27,17 +27,7 @@ module Essence
     end
 
     def before_render
-      set_base_html_options
-    end
-
-    def set_base_html_options
-      base_html_options = {
-        class: class_names(
-          'empty-state'
-        )
-      }
-
-      @html_options = merge_options(base_html_options, @html_options)
+      set_base_html_options('empty-state')
     end
   end
 end
