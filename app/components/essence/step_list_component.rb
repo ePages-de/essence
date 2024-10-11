@@ -24,21 +24,11 @@ module Essence
     private
 
     def before_render
-      set_base_html_options
+      set_base_html_options('step-list')
     end
 
     def render?
       items.any?
-    end
-
-    def set_base_html_options
-      base_html_options = {
-        class: class_names(
-          'step-list'
-        )
-      }
-
-      @html_options = merge_options(base_html_options, @html_options)
     end
   end
 end

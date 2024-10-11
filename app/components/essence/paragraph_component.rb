@@ -11,21 +11,13 @@ module Essence
     private
 
     def before_render
-      set_base_html_options
-    end
-
-    def set_base_html_options
-      base_html_options = {
-        class: class_names(
-          'paragraph'
-        ),
+      set_base_html_options(
+        'paragraph',
         data: {
           controller: 'paragraph',
           paragraph_external_icon_value:
         }
-      }
-
-      @html_options = merge_options(base_html_options, @html_options)
+      )
     end
 
     def paragraph_external_icon_value
