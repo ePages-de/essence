@@ -3,7 +3,7 @@
 require_relative 'lib/essence/version'
 
 Gem::Specification.new do |spec|
-  spec.name        = 'essence'
+  spec.name        = 'epages-essence'
   spec.version     = Essence::VERSION
   spec.authors     = [
     'Unai Abrisketa',
