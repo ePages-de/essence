@@ -1,6 +1,6 @@
 # Essence
 
-![Gem Version](https://img.shields.io/gem/v/essence)
+![Gem Version](https://img.shields.io/gem/v/epages-essence)
 ![License](https://img.shields.io/github/license/ePages-de/essence)
 
 ## Installation
@@ -8,7 +8,7 @@
 1. Add this line to your application's Gemfile:
 
     ```ruby
-    gem 'essence'
+    gem 'epages-essence'
     ```
 
 1. Execute the following command:
