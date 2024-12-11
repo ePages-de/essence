@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
   spec.summary     = "ViewComponents for ePages's online shop software Beyond"
   spec.description = <<-DESC
     Essence is an open-source framework that provides ViewComponents,
-    form styles and other functionality for appsdesigned and developed for the
+    form styles and other functionality for apps designed and developed for the
     online shop software Beyond
   DESC
   spec.license = 'MIT'
