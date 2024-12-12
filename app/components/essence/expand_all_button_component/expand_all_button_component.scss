@@ -1,0 +1,13 @@
+:root {
+  --primaryLink-color: deepskyblue;
+  --primaryLink-hover-color: #0099cc;
+}
+
+$expand-all-button-icon-size: 15px;
+
+.expand-all-button {
+  .button-icon {
+    height: $expand-all-button-icon-size;
+    width: $expand-all-button-icon-size;
+  }
+}

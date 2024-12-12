@@ -1,0 +1,8 @@
+<div <%= tag.attributes **html_options %>>
+  <%= render Essence::ButtonComponent.new(name:, display_as: :link, type: :button, class: 'expandable-button', data: { action: 'expandable#toggle' }) do |button| %>
+    <% button.with_left_icon 'arrow_right' %>
+  <% end %>
+  <div class="expandable-content">
+    <%= content %>
+  </div>
+</div>
