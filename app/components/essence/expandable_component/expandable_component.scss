@@ -1,0 +1,42 @@
+:root {
+  --primaryLink-color: deepskyblue;
+  --primaryLink-hover-color: #0099cc;
+}
+
+$expandable-icon-size: 10px;
+
+.expandable {
+  &[data-expandable-expanded-value="false"] {
+    .expandable-content {
+      height: 0;
+    }
+  }
+
+  &[data-expandable-expanded-value="true"] {
+    .button-icon {
+      transform: rotate(90deg);
+    }
+
+    .expandable-content {
+      margin-top: 10px;
+    }
+  }
+
+  &-button {
+    font-weight: bold;
+
+    .button-icon {
+      height: $expandable-icon-size;
+      width: $expandable-icon-size;
+    }
+  }
+
+  &-content {
+    interpolate-size: allow-keywords;
+    height: auto;
+    margin-top: 0;
+    overflow: hidden;
+    padding-left: 20px;
+    transition: height 250ms, margin-top 250ms;
+  }
+}
