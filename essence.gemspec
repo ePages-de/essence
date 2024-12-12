@@ -43,7 +43,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'gretel',          '~> 5.0'
   spec.add_dependency 'importmap-rails', '~> 2.0'
   spec.add_dependency 'inline_svg',      '~> 1.10'
-  spec.add_dependency 'rails',           '>= 7.1.4'
+  spec.add_dependency 'rails',           '~> 7.1.4'
   spec.add_dependency 'sassc-rails',     '~> 2.1'
   spec.add_dependency 'simple_form',     '~> 5.3'
   spec.add_dependency 'stimulus-rails',  '~> 1.3'
