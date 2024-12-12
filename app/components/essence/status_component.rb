@@ -30,7 +30,7 @@ module Essence
                    variant: DEFAULT_VARIANT,
                    bubble: DEFAULT_BUBBLE,
                    **html_options)
-      @text         = text&.to_s&.strip&.presence&.downcase
+      @text         = text.presence&.strip&.downcase
       @variant      = fetch_or_fallback(VARIANT_OPTIONS, variant.to_sym, DEFAULT_VARIANT)
       @bubble       = fetch_or_fallback(BUBBLE_OPTIONS, bubble&.to_sym, DEFAULT_BUBBLE)
       @html_options = html_options
