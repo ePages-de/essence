@@ -1,0 +1,18 @@
+.card {
+  background-color: var(--card-background);
+  border-radius: var(--card-borderRadius);
+  box-shadow: var(--card-shadow);
+  padding: var(--card-padding);
+}
+
+.card-headline {
+  color: var(--card-headline);
+  font-size: 140%;
+  margin: -10px 0 .83em;
+}
+
+.card-sub-headline {
+  color: var(--formGroup-label);
+  font-size: 13px;
+  margin: 0 0 20px;
+}

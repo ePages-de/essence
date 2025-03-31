@@ -1,0 +1,53 @@
+.notification {
+  background-color: var(--notification-background);
+  border-radius: var(--notification-borderRadius);
+  display: flex;
+}
+
+.notification-body {
+  color: var(--notification-text);
+  padding: 8px 14px;
+}
+
+.notification-danger {
+  border: 1px solid var(--notification-danger);
+
+  .notification-indicator {
+    background-color: var(--notification-danger);
+  }
+}
+
+.notification-icon {
+  display: block;
+  fill: var(--notification-background);
+  height: 18px;
+  width: 18px;
+}
+
+.notification-indicator {
+  padding: 10px 8px;
+}
+
+.notification-info {
+  border: 1px solid var(--notification-info);
+
+  .notification-indicator {
+    background-color: var(--notification-info);
+  }
+}
+
+.notification-success {
+  border: 1px solid var(--notification-success);
+
+  .notification-indicator {
+    background-color: var(--notification-success);
+  }
+}
+
+.notification-warning {
+  border: 1px solid var(--notification-warning);
+
+  .notification-indicator {
+    background-color: var(--notification-warning);
+  }
+}

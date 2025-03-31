@@ -2,11 +2,13 @@
 
 module Essence
   class CardComponent < ApplicationComponent
-    attr_reader :headline, :html_options
+    attr_reader :headline, :sub_headline, :html_options
 
     def initialize(headline: nil,
+                   sub_headline: nil,
                    **html_options)
       @headline     = headline
+      @sub_headline = sub_headline
       @html_options = html_options
     end
 
@@ -20,7 +22,7 @@ module Essence
       content?
     end
 
-    [:headline].each do |method_name|
+    [:headline, :sub_headline].each do |method_name|
       define_method(:"#{method_name}?") do
         instance_variable_get(:"@#{method_name}").present?
       end

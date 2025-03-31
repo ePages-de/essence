@@ -15,9 +15,7 @@ module Essence
       end
     end
 
-    def assets_path
-      self.class.assets_path
-    end
+    delegate :assets_path, to: :class
 
     private
 

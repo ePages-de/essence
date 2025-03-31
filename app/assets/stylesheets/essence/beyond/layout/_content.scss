@@ -1,9 +1,0 @@
-.content {
-  padding: 25px 25px 100px;
-}
-
-.action-bar {
-  & + .content {
-    padding-top: 12px;
-  }
-}

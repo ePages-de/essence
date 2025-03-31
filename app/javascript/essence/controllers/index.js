@@ -1,6 +1,9 @@
 // Import and register all your controllers from the importmap under controllers/*
 
-import { application } from "./controllers/application"
+import { application } from "controllers/application"
+
+import { eagerLoadControllersFrom } from "@hotwired/stimulus-loading"
+eagerLoadControllersFrom("controllers", application)
 
 import ParagraphComponentController from 'components/essence/paragraph_component/paragraph_component_controller'
 application.register('paragraph', ParagraphComponentController)

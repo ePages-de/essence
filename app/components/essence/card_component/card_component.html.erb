@@ -2,6 +2,9 @@
   <% if headline? %>
     <h2 class="card-headline"><%= headline %></h2>
   <% end %>
+  <% if sub_headline? %>
+    <p class="card-sub-headline"><%= sub_headline %></p>
+  <% end %>
   <div class="card-content">
     <%= content %>
   </div>
