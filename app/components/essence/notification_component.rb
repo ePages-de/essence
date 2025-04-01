@@ -8,18 +8,22 @@ module Essence
 
     VARIANT_MAPPINGS = {
       :success => 'notification-success',
+      :notice => 'notification-notice',
       DEFAULT_VARIANT => 'notification-info',
       :warning => 'notification-warning',
-      :danger => 'notification-danger'
+      :danger => 'notification-danger',
+      :alert => 'notification-danger'
     }.freeze
 
     VARIANT_OPTIONS = VARIANT_MAPPINGS.keys.freeze
 
     ICON_MAPPINGS = {
       :success => 'circle_check',
+      :notice => 'circle_check',
       DEFAULT_VARIANT => 'circle_info',
       :warning => 'circle_exclamation',
-      :danger => 'circle_xmark'
+      :danger => 'circle_xmark',
+      :alert => 'circle_xmark'
     }.freeze
 
     def initialize(variant: DEFAULT_VARIANT,

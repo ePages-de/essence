@@ -2,6 +2,7 @@
   border-collapse: collapse;
   overflow: hidden;
   text-align: left;
+  width: 100%;
 
   thead {
     background-color: var(--table-header-background);
