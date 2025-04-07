@@ -39,7 +39,9 @@ module Essence
     end
 
     initializer 'essence.importmap', after: 'importmap' do |app|
+      Essence.importmap.draw(app.root.join('config/importmap.rb'))
       Essence.importmap.draw(root.join('config/importmap.rb'))
+
       if app.config.importmap.sweep_cache && app.config.reloading_enabled?
         Essence.importmap.cache_sweeper(watches: [root.join('app/javascript'), root.join('app/components')])
 
