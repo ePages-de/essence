@@ -1,0 +1,11 @@
+<div <%= tag.attributes **html_options %>>
+  <div class="flash-indicator">
+    <%= render Essence::IconComponent.new(name: icon, class: 'flash-icon') %>
+  </div>
+  <div class="flash-body">
+    <%= content %>
+  </div>
+  <div class="flash-close" data-action="click->flash#dismiss">
+    <%= render Essence::IconComponent.new(name: 'x_mark', class: 'flash-close-icon') %>
+  </div>
+</div>
