@@ -1,5 +1,6 @@
 <%= yield :action_bar %>
 <div class="content">
+  <%= render Essence::FlashComponent::ContainerComponent.new %>
   <%= render Essence::BreadcrumbComponent.new(style: 'margin-bottom: 30px;') %>
   <%= render Essence::TitleComponent.new(text: yield(:title), style: 'margin-bottom: 30px;') %>
   <main>
