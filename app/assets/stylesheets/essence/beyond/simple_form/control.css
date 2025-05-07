@@ -3,7 +3,8 @@
   &.numeric,
   &.password,
   &.select,
-  &.string {
+  &.string,
+  &.text {
     background-color: var(--inputField-background);
     border: 1px solid var(--inputField-border);
     color: var(--inputField-text);
@@ -32,9 +33,14 @@
     }
   }
 
+  &.text {
+    min-height: 100px;
+  }
+
   &.numeric,
   &.password,
-  &.string {
+  &.string,
+  &.text {
     &:read-only {
       background-color: var(--inputField-background-disabled);
       color: var(--inputField-text-disabled);
@@ -45,7 +51,7 @@
   &.select {
     -webkit-appearance: none;
     appearance: none;
-    background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg data-token-category=%27icons%27 xmlns=%27http://www.w3.org/2000/svg%27 width=%2724%27 height=%2724%27 viewBox=%270 0 24 24%27 fill=%27%237a764c%27%3E %3Cpath d=%27M24,7L12,19L0,7H24z%27/%3E %3C/svg%3E');
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg data-token-category=%27icons%27 xmlns=%27http://www.w3.org/2000/svg%27 width=%2724%27 height=%2724%27 viewBox=%270 0 24 24%27 fill=%27%237a764c%27%3E %3Cpath d=%27M24,7L12,19L0,7H24z%27/%3E %3C/svg%3E");
     background-position: right 10px top 50%;
     background-repeat: no-repeat;
     background-size: 10px auto;
@@ -105,12 +111,12 @@
     &::before {
       background-color: var(--flipSwitch-unchecked-background);
       border-radius: 100%;
-      content: '';
+      content: "";
       height: 18px;
       left: 1px;
       position: absolute;
       top: 1px;
-      transition: .3s;
+      transition: 0.3s;
       width: 18px;
       background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20.5" height="20.5" viewBox="0 0 20.5 20.5"><path fill="%23ffffff" d="M15.2,13.7l-3.5-3.4,3.4-3.5-1.5-1.5-3.4,3.5-3.5-3.4-1.5,1.5,3.5,3.4-3.4,3.5,1.5,1.5,3.4-3.5,3.5,3.4,1.5-1.5Z"/></svg>');
       background-size: contain;

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-pin 'application', to: 'essence/application.js', preload: true
+pin 'essence/application', to: 'essence/application.js', preload: true
 pin '@hotwired/turbo-rails', to: 'turbo.min.js', preload: true
 pin '@hotwired/stimulus', to: 'stimulus.min.js', preload: true
 pin '@hotwired/stimulus-loading', to: 'stimulus-loading.js', preload: true
