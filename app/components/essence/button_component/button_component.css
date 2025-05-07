@@ -29,7 +29,7 @@
   background: var(--button-primary-background);
   border-bottom-color: var(--button-primary-borderBottom-color);
 
-  &:hover {
+  &:not(:disabled):hover {
     background: var(--button-primary-background-hover);
   }
 }
@@ -38,7 +38,7 @@
   background: var(--button-secondary-background);
   border-bottom-color: var(--button-secondary-borderBottom-color);
 
-  &:hover {
+  &:not(:disabled):hover {
     background: var(--button-secondary-background-hover);
   }
 }
@@ -47,7 +47,7 @@
   background: var(--button-danger-background);
   border-bottom-color: var(--button-danger-borderBottom-color);
 
-  &:hover {
+  &:not(:disabled):hover {
     background: var(--button-danger-background-hover);
   }
 }
@@ -59,7 +59,7 @@
   color: var(--button-outline-text);
   padding-top: calc(var(--button-horizontal-padding) - 1px);
 
-  &:hover {
+  &:not(:disabled):hover {
     background-color: var(--button-outline-background-hover);
   }
 }
