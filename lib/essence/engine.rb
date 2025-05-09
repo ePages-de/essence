@@ -43,7 +43,9 @@ module Essence
       Essence.importmap.draw(root.join('config/importmap.rb'))
 
       if app.config.importmap.sweep_cache && app.config.reloading_enabled?
-        Essence.importmap.cache_sweeper(watches: [root.join('app/javascript'), root.join('app/components')])
+        Essence.importmap.cache_sweeper(watches: [app.root.join('app/javascript'),
+                                                  root.join('app/javascript'),
+                                                  root.join('app/components')])
 
         ActiveSupport.on_load(:action_controller_base) do
           before_action { Essence.importmap.cache_sweeper.execute_if_updated }
