@@ -1,14 +1,21 @@
 .form-group {
-  display: flex;
-  align-items: center;
+  &:not(:has(trix-editor)) {
+    display: flex;
+    align-items: center;
 
-  & > *:first-child {
-    border-top-left-radius: var(--inputField-borderRadius);
-    border-bottom-left-radius: var(--inputField-borderRadius);
-  }
+    & > *:first-child {
+      border-top-left-radius: var(--inputField-borderRadius);
+      border-bottom-left-radius: var(--inputField-borderRadius);
+    }
 
-  & > *:last-child {
-    border-top-right-radius: var(--inputField-borderRadius);
-    border-bottom-right-radius: var(--inputField-borderRadius);
+    & > *:last-child {
+      border-top-right-radius: var(--inputField-borderRadius);
+      border-bottom-right-radius: var(--inputField-borderRadius);
+    }
+
+    & > .date:last-of-type {
+      border-top-right-radius: var(--inputField-borderRadius);
+      border-bottom-right-radius: var(--inputField-borderRadius);
+    }
   }
 }

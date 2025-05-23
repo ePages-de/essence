@@ -3,6 +3,7 @@
   &.numeric,
   &.password,
   &.select,
+  &.date,
   &.string,
   &.text {
     background-color: var(--inputField-background);
@@ -48,7 +49,8 @@
     }
   }
 
-  &.select {
+  &.select,
+  &.date {
     -webkit-appearance: none;
     appearance: none;
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg data-token-category=%27icons%27 xmlns=%27http://www.w3.org/2000/svg%27 width=%2724%27 height=%2724%27 viewBox=%270 0 24 24%27 fill=%27%237a764c%27%3E %3Cpath d=%27M24,7L12,19L0,7H24z%27/%3E %3C/svg%3E");
@@ -61,6 +63,16 @@
       background-image: none;
       padding: 6px 8px;
       pointer-events: none;
+    }
+  }
+
+  &.date {
+    &:not(:first-child) {
+      border-left: 0;
+
+      &:focus {
+        box-shadow: -1px 0 0 0 var(--inputField-border-focus);
+      }
     }
   }
 
@@ -190,7 +202,7 @@
   display: flex;
   flex-shrink: 0;
   padding: 6px 8px;
-  line-height: normal;
+  line-height: 1.5;
 
   &:has(.form-control) {
     border: 0;
