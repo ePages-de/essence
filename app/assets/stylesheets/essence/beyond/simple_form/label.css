@@ -31,4 +31,8 @@
     line-height: 16px;
     padding-left: 10px;
   }
+
+  &.file-name {
+    margin-left: 1em;
+  }
 }

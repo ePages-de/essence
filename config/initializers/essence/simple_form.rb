@@ -77,6 +77,20 @@ SimpleForm.setup do |config|
     b.use :hint, wrap_with: { tag: :div, class: 'form-hint' }
   end
 
+  config.wrappers :vertical_file,
+                  class: 'form-row' do |b|
+    b.use :html5
+
+    b.use :label, class: 'form-label'
+    b.wrapper class: 'form-wrapper' do |bb|
+      bb.wrapper class: 'form-group' do |bbb|
+        bbb.use :input, class: 'button button-outline form-control', error_class: 'invalid', valid_class: 'valid'
+      end
+      bb.use :error, wrap_with: { tag: :p, class: 'form-error' }
+    end
+    b.use :hint, wrap_with: { tag: :div, class: 'form-hint' }
+  end
+
   config.wrappers :vertical_boolean,
                   class: 'form-row' do |b|
     b.wrapper class: 'form-wrapper' do |bb|
@@ -109,11 +123,12 @@ SimpleForm.setup do |config|
   # type as key and the wrapper that will be used for all inputs with specified type.
   config.wrapper_mappings = {
     boolean: :vertical_boolean,
-    date: :vertical_multi_select,
     check_boxes: :vertical_collection,
+    country: :vertical_select,
+    date: :vertical_multi_select,
+    file: :vertical_file,
     radio_buttons: :vertical_collection,
     select: :vertical_select,
-    country: :vertical_select,
     toggle: :vertical_boolean
   }
 
