@@ -30,5 +30,11 @@ module Essence
     def render?
       items.any?
     end
+
+    [:title].each do |method_name|
+      define_method(:"#{method_name}?") do
+        instance_variable_get(:"@#{method_name}").present?
+      end
+    end
   end
 end
