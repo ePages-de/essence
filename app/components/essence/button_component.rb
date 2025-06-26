@@ -13,7 +13,8 @@ module Essence
         DEFAULT_VARIANT => 'button-primary',
         secondary: 'button-secondary',
         danger: 'button-danger',
-        outline: 'button-outline'
+        outline: 'button-outline',
+        copilot: 'button-copilot'
       }
     }.freeze
 

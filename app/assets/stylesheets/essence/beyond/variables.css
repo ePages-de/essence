@@ -156,6 +156,19 @@
   --button-link-default-text: #787878;
   /*
   /*  ---------------------------------------------------
+  /*  Copilot
+  /*  --------------------------------------------------- */
+  --button-copilot-background: linear-gradient(
+    90deg,
+    oklch(from Orange calc(l - 0.1) c h),
+    Orange,
+    oklch(from Orange calc(l + 0.1) c h),
+    Orange,
+    oklch(from Orange calc(l - 0.1) c h)
+  );
+  --button-copilot-borderBottom-color: Orange;
+  /*
+  /*  ---------------------------------------------------
   /*  RichTextEditor
   /*  --------------------------------------------------- */
   --textEditor-text: #3e3e3e;
@@ -180,7 +193,7 @@
   --table-header-link: #3e3e3e;
   --table-header-link-hover: #252525;
   --table-header-sort-icon-default: #b3b3b3;
-  --table-header-sort-icon: currentColor;
+  --table-header-sort-icon: currentcolor;
   /*
   /*  ---------------------------------------------------
   /*  Media queries
@@ -214,7 +227,7 @@
   --smartInputField-suggestion-active: #b3ecff;
   --smartInputField-value-background: #d9d9d9;
   --smartInputField-value-text: #666666;
-  --smartInputField-value-icon: currentColor;
+  --smartInputField-value-icon: currentcolor;
   --smartInputField-value-icon-hover: #4d4d4d;
   --smartInputField-value-borderRadius: 3px;
   /*

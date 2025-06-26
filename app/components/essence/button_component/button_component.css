@@ -54,13 +54,38 @@
 
 .button-outline {
   background-color: var(--button-outline-background);
-  border: var(--button-outline-border-width) solid var(--button-outline-border-color);
+  border: var(--button-outline-border-width) solid
+    var(--button-outline-border-color);
   border-bottom-width: var(--button-outline-borderBottom-width);
   color: var(--button-outline-text);
   padding-top: calc(var(--button-horizontal-padding) - 1px);
 
   &:not(:disabled):hover {
     background-color: var(--button-outline-background-hover);
+  }
+}
+
+.button-copilot {
+  background-image: var(--button-copilot-background);
+  background-size: 200% auto;
+  border-bottom-color: var(--button-copilot-borderBottom-color);
+  transition: background-position 0.3s ease;
+
+  &::before {
+    content: "";
+    width: 17px;
+    background-color: var(--button-text);
+    mask: url("data:image/svg+xml,%3Csvg data-token-category='icons' xmlns='http://www.w3.org/2000/svg' width='83.75' height='67.98' viewBox='0 0 83.75 67.98'%3E%3Cpath d='M83 32.98l-8.7-1c-11.2-1.4-20.1-10.2-21.4-21.4l-1-8.7c-.1-1-1.6-1-1.7 0l-1 8.7c-1.4 11.2-10.2 20.1-21.4 21.4l-8.7 1c-1 .1-1 1.6 0 1.7l8.7 1c11.2 1.4 20.1 10.2 21.4 21.4l1 8.7c.1 1 1.6 1 1.7 0l1-8.7c1.4-11.2 10.2-20.1 21.4-21.4l8.7-1c1-.1 1-1.6 0-1.7zM2.2 15.48l4 .5c5.1.6 9.2 4.6 9.8 9.8l.5 4c.1.5.8.5.8 0l.5-4c.6-5.1 4.6-9.2 9.8-9.8l4-.5c.5-.1.5-.8 0-.8l-4-.5c-5.1-.6-9.2-4.6-9.8-9.8l-.5-4c-.1-.5-.8-.5-.8 0l-.5 4c-.6 5.1-4.6 9.2-9.8 9.8l-4 .5c-.5.1-.5.8 0 .8zm23.2 39.3l-3.4-.4c-4.4-.5-7.9-4-8.4-8.4l-.4-3.4c-.1-.4-.7-.4-.7 0l-.4 3.4c-.5 4.4-4 7.9-8.4 8.4l-3.4.4c-.4.1-.4.7 0 .7l3.4.4c4.4.5 7.9 4 8.4 8.4l.4 3.4c.1.4.7.4.7 0l.4-3.4c.5-4.4 4-7.9 8.4-8.4l3.4-.4c.4-.1.4-.7 0-.7z'%3E%3C/path%3E%3C/svg%3E%0A")
+      no-repeat center;
+    mask-size: contain;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg data-token-category='icons' xmlns='http://www.w3.org/2000/svg' width='83.75' height='67.98' viewBox='0 0 83.75 67.98'%3E%3Cpath d='M83 32.98l-8.7-1c-11.2-1.4-20.1-10.2-21.4-21.4l-1-8.7c-.1-1-1.6-1-1.7 0l-1 8.7c-1.4 11.2-10.2 20.1-21.4 21.4l-8.7 1c-1 .1-1 1.6 0 1.7l8.7 1c11.2 1.4 20.1 10.2 21.4 21.4l1 8.7c.1 1 1.6 1 1.7 0l1-8.7c1.4-11.2 10.2-20.1 21.4-21.4l8.7-1c1-.1 1-1.6 0-1.7zM2.2 15.48l4 .5c5.1.6 9.2 4.6 9.8 9.8l.5 4c.1.5.8.5.8 0l.5-4c.6-5.1 4.6-9.2 9.8-9.8l4-.5c.5-.1.5-.8 0-.8l-4-.5c-5.1-.6-9.2-4.6-9.8-9.8l-.5-4c-.1-.5-.8-.5-.8 0l-.5 4c-.6 5.1-4.6 9.2-9.8 9.8l-4 .5c-.5.1-.5.8 0 .8zm23.2 39.3l-3.4-.4c-4.4-.5-7.9-4-8.4-8.4l-.4-3.4c-.1-.4-.7-.4-.7 0l-.4 3.4c-.5 4.4-4 7.9-8.4 8.4l-3.4.4c-.4.1-.4.7 0 .7l3.4.4c4.4.5 7.9 4 8.4 8.4l.4 3.4c.1.4.7.4.7 0l.4-3.4c.5-4.4 4-7.9 8.4-8.4l3.4-.4c.4-.1.4-.7 0-.7z'%3E%3C/path%3E%3C/svg%3E%0A")
+      no-repeat center;
+    -webkit-mask-size: contain;
+    margin-right: 7px;
+  }
+
+  &:not(:disabled):hover {
+    background-position: 100%;
   }
 }
 
