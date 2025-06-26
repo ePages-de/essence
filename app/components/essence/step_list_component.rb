@@ -6,7 +6,7 @@ module Essence
 
     renders_many :items, 'ItemComponent'
 
-    def initialize(title:,
+    def initialize(title: nil,
                    **html_options)
       @title        = title
       @html_options = html_options
