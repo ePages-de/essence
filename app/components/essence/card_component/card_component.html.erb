@@ -1,4 +1,7 @@
 <div <%= tag.attributes **html_options %>>
+  <% if ribbon? %>
+    <%= ribbon %>
+  <% end %>
   <% if headline? %>
     <h2 class="card-headline"><%= headline %></h2>
   <% end %>
