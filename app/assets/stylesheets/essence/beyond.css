@@ -3,6 +3,8 @@
 @import url("beyond/layout/base.css");
 @import url("beyond/layout/content.css");
 
+@import url("flexboxgrid.css");
+
 @import url("beyond/simple_form/control.css");
 @import url("beyond/simple_form/error.css");
 @import url("beyond/simple_form/fieldset.css");

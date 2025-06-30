@@ -1,15 +1,15 @@
 .margin-top {
-  margin-top: 30px;
+  margin-top: 30px !important;
 }
 
 .margin-bottom {
-  margin-bottom: 30px;
+  margin-bottom: 30px !important;
 }
 
 .margin-left {
-  margin-left: 30px;
+  margin-left: 30px !important;
 }
 
 .margin-right {
-  margin-right: 30px;
+  margin-right: 30px !important;
 }

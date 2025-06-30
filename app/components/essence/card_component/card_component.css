@@ -1,3 +1,9 @@
+:root {
+  --ribbon-text: #ffffff;
+  --ribbon-light-background: #a6a6a6;
+  --ribbon-light-shadow: #808080;
+}
+
 .card {
   background-color: var(--card-background);
   border-radius: var(--card-borderRadius);
