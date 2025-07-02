@@ -38,6 +38,7 @@
   > div:first-child {
     position: relative;
     width: 35px;
+    flex-shrink: 0;
   }
 }
 
