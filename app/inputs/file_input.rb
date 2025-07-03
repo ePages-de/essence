@@ -4,10 +4,12 @@ class FileInput < SimpleForm::Inputs::FileInput
   def input(wrapper_options = nil)
     merged_input_options = merge_wrapper_options(input_html_options, wrapper_options)
 
+    input_options = merged_input_options.extract!(:accept, :capture, :multiple)
+
     template.content_tag(:div, **stimulus_configuration) do
       template.concat(build_file_button_label(merged_input_options))
       template.concat(build_filename_display)
-      template.concat(build_hidden_file_field)
+      template.concat(build_hidden_file_field(input_options))
     end
   end
 
@@ -23,9 +25,12 @@ class FileInput < SimpleForm::Inputs::FileInput
                                           data: { file_input_target: 'fileName' })
   end
 
-  def build_hidden_file_field
-    @builder.file_field(attribute_name, style: 'display: none;',
-                                        data: { file_input_target: 'input', action: 'change->file-input#change' })
+  def build_hidden_file_field(input_options)
+    @builder.file_field(attribute_name, input_options.merge(style: 'display: none;',
+                                                            data: {
+                                                              file_input_target: 'input',
+                                                              action: 'change->file-input#change'
+                                                            }))
   end
 
   def input_id
