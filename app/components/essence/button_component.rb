@@ -8,6 +8,8 @@ module Essence
 
     DEFAULT_VARIANT = :primary
 
+    DEFAULT_BUSY = false
+
     BUTTON_MAPPINGS = {
       DEFAULT_DISPLAY_AS => {
         DEFAULT_VARIANT => 'button-primary',
@@ -32,20 +34,30 @@ module Essence
                    url: nil,
                    variant: DEFAULT_VARIANT,
                    display_as: DEFAULT_DISPLAY_AS,
+                   busy: DEFAULT_BUSY,
                    **html_options)
       @name         = name
       @url          = url
       @variant      = fetch_or_fallback(VARIANT_MAPPINGS[display_as.to_sym].keys, variant.to_sym, DEFAULT_VARIANT)
       @display_as   = fetch_or_fallback(DISPLAY_AS_OPTIONS, display_as.to_sym, DEFAULT_DISPLAY_AS)
+      @busy         = fetch_or_fallback_boolean(busy, fallback: DEFAULT_BUSY)
       @html_options = html_options
     end
 
     private
 
     def before_render
-      set_base_html_options(
+      css_classes = [
         @display_as.to_s,
         VARIANT_MAPPINGS.dig(@display_as.to_sym, @variant.to_sym)
+      ]
+      css_classes << 'button-busy' if @busy
+
+      set_base_html_options(
+        *css_classes,
+        data: {
+          controller: 'button'
+        }
       )
     end
   end
