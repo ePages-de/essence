@@ -24,7 +24,7 @@
 
     > div:first-child {
       &::before {
-        content: ' ';
+        content: " ";
         position: absolute;
         left: 10px;
         width: 2px;

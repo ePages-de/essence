@@ -1,18 +1,18 @@
 .spinner {
-  height: 40px;
+  height: var(--spinner-size);
   position: relative;
-  width: 40px;
+  width: var(--spinner-size);
 
   &::after {
     animation: spin 1.5s infinite linear;
     border: solid 4px var(--spinner-border);
     border-bottom-color: var(--spinner-border-highlighting);
     border-radius: 50%;
-    content: '';
-    height: 40px;
+    content: "";
+    height: var(--spinner-size);
     position: absolute;
     transform-origin: center;
-    width: 40px;
+    width: var(--spinner-size);
   }
 }
 
