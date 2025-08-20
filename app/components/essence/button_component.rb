@@ -47,18 +47,30 @@ module Essence
     private
 
     def before_render
-      css_classes = [
+      set_base_html_options(
+        *css_classes,
+        **options
+      )
+    end
+
+    def css_classes
+      classes = [
         @display_as.to_s,
         VARIANT_MAPPINGS.dig(@display_as.to_sym, @variant.to_sym)
       ]
-      css_classes << 'button-busy' if @busy
+      classes << 'button-busy' if @busy && display_as_button?
 
-      set_base_html_options(
-        *css_classes,
-        data: {
-          controller: 'button'
-        }
-      )
+      classes
+    end
+
+    def options
+      return {} unless display_as_button?
+
+      { data: { controller: 'button' } }
+    end
+
+    def display_as_button?
+      @display_as == :button
     end
   end
 end
