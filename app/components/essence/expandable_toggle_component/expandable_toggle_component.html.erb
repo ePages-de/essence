@@ -1,0 +1,3 @@
+<%= render Essence::ButtonComponent.new(name: expand_all_text, display_as: :link, type: :button, **html_options) do |button| %>
+  <% button.with_left_icon 'chevron_up_down' %>
+<% end %>

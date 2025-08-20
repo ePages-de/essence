@@ -24,6 +24,8 @@
 @import url("card_component/card_component.css");
 @import url("clipboard_copy_component/clipboard_copy_component.css");
 @import url("empty_state_component/empty_state_component.css");
+@import url("expandable_component/expandable_component.css");
+@import url("expandable_toggle_component/expandable_toggle_component.css");
 @import url("flash_component/flash_component.css");
 @import url("link_component/link_component.css");
 @import url("notification_component/notification_component.css");
