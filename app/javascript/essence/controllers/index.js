@@ -11,6 +11,12 @@ application.register('button', ButtonComponentController)
 import ClipboardCopyComponentController from 'components/essence/clipboard_copy_component/clipboard_copy_component_controller'
 application.register('clipboard-copy', ClipboardCopyComponentController)
 
+import ExpandableComponentController from 'components/essence/expandable_component/expandable_component_controller'
+application.register('expandable', ExpandableComponentController)
+
+import ExpandableToggleComponentController from 'components/essence/expandable_toggle_component/expandable_toggle_component_controller'
+application.register('expandable-toggle', ExpandableToggleComponentController)
+
 import FlashComponentController from 'components/essence/flash_component/flash_component_controller'
 application.register('flash', FlashComponentController)
 
