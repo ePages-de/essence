@@ -1,0 +1,66 @@
+:root {
+  --ribbon-text: #ffffff;
+  --ribbon-light-background: #a6a6a6;
+  --ribbon-light-shadow: #808080;
+}
+
+.card {
+  background-color: var(--card-background);
+  border-radius: var(--card-borderRadius);
+  box-shadow: var(--card-shadow);
+  padding: var(--card-padding);
+  position: relative;
+}
+
+.card-ribbon {
+  position: absolute;
+  top: -8px;
+  right: 40px;
+  display: inline-block;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  color: var(--ribbon-text);
+}
+
+.card-ribbon-light {
+  background-color: var(--ribbon-light-background);
+
+  .card-ribbon-text::after {
+    border-bottom: 8px solid var(--ribbon-light-shadow);
+  }
+}
+
+.card-ribbon-dark {
+  background-color: var(--ribbon-dark-background);
+
+  .card-ribbon-text::after {
+    border-bottom: 8px solid var(--ribbon-dark-shadow);
+  }
+}
+
+.card-ribbon-text {
+  position: relative;
+
+  &::after {
+    content: "";
+    border-right: 7px solid transparent;
+    position: absolute;
+    top: -7px;
+    right: -17px;
+  }
+}
+
+.card-headline {
+  color: var(--card-headline);
+  font-size: 140%;
+  margin: -10px 0 0.83em;
+}
+
+.card-sub-headline {
+  color: var(--formGroup-label);
+  font-size: 13px;
+  margin: 0 0 20px;
+}

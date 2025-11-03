@@ -23,8 +23,9 @@
     <!DOCTYPE html>
     <html>
       <head>
-        <%= stylesheet_link_tag 'essence/beyond', 'data-turbo-track': 'reload' %>
-        <%= javascript_importmap_tags 'essence/application' %>
+        <%= stylesheet_link_tag 'essence/beyond' %>
+        <%= javascript_importmap_tags "application", importmap: Essence.importmap  %>
+
         <%= yield :head %>
       </head>
 
@@ -34,7 +35,7 @@
     </html>
     ```
 
-    > Any `javascript_import_module_tag` must come after the `javascript_importmap_tags` declaration, that's why `<%= yield :head %>` is placed after this declaration. See [`importmap-rails` gem](https://github.com/rails/importmap-rails?tab=readme-ov-file#selectively-importing-modules).
+    > Any `javascript_import_module_tag` should come after the `javascript_importmap_tags` declaration, that's why `<%= yield :head %>` is placed after this declaration. See [`importmap-rails` gem](https://github.com/rails/importmap-rails?tab=readme-ov-file#selectively-importing-modules).
 
 ## Component preview
 

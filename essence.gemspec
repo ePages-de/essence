@@ -18,12 +18,12 @@ Gem::Specification.new do |spec|
     'abernardi@epages.com'
   ]
   spec.homepage    = 'https://github.com/ePages-de/essence'
-  spec.summary     = "ViewComponents for ePages's online shop software Beyond"
-  spec.description = <<-DESC
+  spec.summary     = 'ViewComponents for ePages\'s online shop software Beyond'
+  spec.description = <<-TEXT
     Essence is an open-source framework that provides ViewComponents,
     form styles and other functionality for apps designed and developed for the
     online shop software Beyond
-  DESC
+  TEXT
   spec.license = 'MIT'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the "allowed_push_host"
@@ -41,11 +41,11 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'country_select',  '~> 10.0'
   spec.add_dependency 'gretel',          '~> 5.0'
-  spec.add_dependency 'importmap-rails', '~> 2.0'
+  spec.add_dependency 'importmap-rails', '~> 2.1'
   spec.add_dependency 'inline_svg',      '~> 1.10'
-  spec.add_dependency 'rails',           '>= 7.2.2', '< 8.0'
-  spec.add_dependency 'sassc-rails',     '~> 2.1'
+  spec.add_dependency 'rails',           '>= 8.0.2'
   spec.add_dependency 'simple_form',     '~> 5.3'
   spec.add_dependency 'stimulus-rails',  '~> 1.3'
-  spec.add_dependency 'view_component',  '~> 3.17'
+  spec.add_dependency 'turbo-rails',     '~> 2.0'
+  spec.add_dependency 'view_component',  '~> 3.21'
 end

@@ -1,0 +1,27 @@
+.spinner {
+  height: var(--spinner-size);
+  position: relative;
+  width: var(--spinner-size);
+
+  &::after {
+    animation: spin 1.5s infinite linear;
+    border: solid 4px var(--spinner-border);
+    border-bottom-color: var(--spinner-border-highlighting);
+    border-radius: 50%;
+    content: "";
+    height: var(--spinner-size);
+    position: absolute;
+    transform-origin: center;
+    width: var(--spinner-size);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

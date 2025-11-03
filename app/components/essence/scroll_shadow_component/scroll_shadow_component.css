@@ -1,0 +1,9 @@
+scroll-shadow {
+  width: 100%;
+}
+
+.scroll-shadow {
+  max-height: 100%;
+  max-width: 100%;
+  overflow: auto;
+}

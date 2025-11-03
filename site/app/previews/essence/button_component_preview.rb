@@ -46,6 +46,15 @@ module Essence
       render Essence::ButtonComponent.new(name:, url:, variant: :outline, disabled:)
     end
 
+    #
+    # @label Copilot
+    #
+    def copilot(name: 'Button text',
+                url: nil,
+                disabled: false)
+      render Essence::ButtonComponent.new(name:, url:, variant: :copilot, disabled:)
+    end
+
     # @!endgroup
 
     # @!group With left icon

@@ -6,7 +6,7 @@ module Essence
 
     renders_many :items, 'ItemComponent'
 
-    def initialize(title:,
+    def initialize(title: nil,
                    **html_options)
       @title        = title
       @html_options = html_options
@@ -29,6 +29,12 @@ module Essence
 
     def render?
       items.any?
+    end
+
+    [:title].each do |method_name|
+      define_method(:"#{method_name}?") do
+        instance_variable_get(:"@#{method_name}").present?
+      end
     end
   end
 end

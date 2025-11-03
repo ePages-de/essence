@@ -4,5 +4,5 @@ require 'essence/version'
 require 'essence/engine'
 
 module Essence
-  # Your code goes here...
+  mattr_accessor :importmap, default: Importmap::Map.new
 end

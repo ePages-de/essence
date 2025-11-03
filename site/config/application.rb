@@ -24,6 +24,9 @@ module Site
   class Application < Rails::Application
     config.load_defaults Rails::VERSION::STRING.to_f
 
+    # For compatibility with applications that use this config
+    config.action_controller.include_all_helpers = false
+
     # Please, add to the `ignore` list any other `lib` subdirectories that do
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
     # Common ones are `templates`, `generators`, or `middleware`, for example.
@@ -37,14 +40,11 @@ module Site
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
-    # Don't generate system test files.
-    config.generators.system_tests = nil
-
     if config.respond_to?(:lookbook)
       def fetch_asset_files(data)
         data.preview.components.flat_map do |component|
           Dir[Essence::Engine.root.join('app/components',
-                                        "#{component.relative_file_path.to_s.chomp('.rb')}/*.{scss,js}")]
+                                        "#{component.relative_file_path.to_s.chomp('.rb')}/*.{css,scss,js}")]
         end
       end
 

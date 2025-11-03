@@ -1,0 +1,23 @@
+.action-bar {
+  background-color: var(--workspace-toolbar-background);
+  border-bottom: var(--workspace-toolbar-border);
+  height: var(--header-bar-height);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.action-bar-wrapper {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  padding: 0 25px;
+}
+
+.action-bar-left-content,
+.action-bar-right-content {
+  align-items: center;
+  display: flex;
+  gap: 30px;
+}

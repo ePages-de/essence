@@ -7,7 +7,8 @@ module Essence
     [:left, :right].each do |side|
       renders_many side, types: {
         button: ButtonComponent,
-        link: LinkComponent
+        link: LinkComponent,
+        button_group: ButtonGroupComponent
       }
     end
 

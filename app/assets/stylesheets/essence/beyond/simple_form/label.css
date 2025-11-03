@@ -1,0 +1,38 @@
+.form-label {
+  display: inline-block;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+
+  abbr {
+    text-decoration: none;
+  }
+
+  &.collection_radio_buttons {
+    color: #808080;
+    font-size: 13px;
+  }
+
+  &:not(.collection_radio_buttons) {
+    color: var(--formGroup-label);
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+  &.boolean,
+  &.collection_check_boxes,
+  &.collection_radio_buttons {
+    line-height: 16px;
+    padding-left: 7px;
+  }
+
+  &.toggle {
+    line-height: 16px;
+    padding-left: 10px;
+  }
+
+  &.file-name {
+    margin-left: 1em;
+  }
+}
