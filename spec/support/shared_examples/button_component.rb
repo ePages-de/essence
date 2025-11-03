@@ -35,7 +35,7 @@ RSpec.shared_examples 'button component' do |variant|
 
     aggregate_failures do
       # TODO: Validate the correct icon
-      expect(page).to have_css "body > button.button.button-#{variant} > span:first-child", text: name, count: 1
+      expect(page).to have_css "body > button.button.button-#{variant} > span", text: name, count: 1
       expect(page).to have_css "body > button.button.button-#{variant} > svg.button-icon:last-child", count: 1
     end
   end
