@@ -41,36 +41,17 @@ module Site
     # config.eager_load_paths << Rails.root.join("extras")
 
     if config.respond_to?(:lookbook)
-      def fetch_asset_files(data)
-        data.preview.components.flat_map do |component|
-          Dir[Essence::Engine.root.join('app/components',
-                                        "#{component.relative_file_path.to_s.chomp('.rb')}/*.{css,scss,js}")]
-        end
-      end
-
-      Lookbook.add_panel(
-        'assets',
-        label: 'Assets',
-        partial: 'lookbook/panels/assets',
-        hotkey: 'a',
-        disabled: ->(data) { fetch_asset_files(data).empty? },
-        locals: lambda do |data|
-          assets = fetch_asset_files(data).map do |path_str|
-            path = Pathname(path_str)
-            { path:, language: path.extname.delete('.') }
-          end
-
-          { assets: }
-        end
-      )
-
       config.lookbook.project_name                     = "Essence v#{Essence::VERSION}"
       config.lookbook.component_paths                  = [Essence::Engine.root.join('app/components')]
       config.lookbook.preview_paths                    = [Rails.root.join('app/previews')]
-      config.lookbook.preview_inspector.drawer_panels  = [:params, :source, :assets]
+      config.lookbook.preview_inspector.drawer_panels  = [:params, :source]
       config.lookbook.preview_embeds.policy            = 'ALLOWALL'
       config.view_component.default_preview_layout     = 'lookbook'
       config.lookbook.preview_display_options          = {
+        platform: [
+          'beyond',
+          'now'
+        ],
         wrapper: [
           'background',
           'card'
