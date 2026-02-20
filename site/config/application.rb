@@ -48,6 +48,10 @@ module Site
       config.lookbook.preview_embeds.policy            = 'ALLOWALL'
       config.view_component.default_preview_layout     = 'lookbook'
       config.lookbook.preview_display_options          = {
+        platform: [
+          'beyond',
+          'now'
+        ],
         wrapper: [
           'background',
           'card'

@@ -20,7 +20,7 @@
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app %>
 
-    <%= stylesheet_link_tag 'essence/beyond' %>
+    <%= stylesheet_link_tag "essence/#{params.dig(:lookbook, :display, :platform) || 'beyond'}" %>
     <%= javascript_importmap_tags 'application', importmap: Essence.importmap %>
   </head>
 
