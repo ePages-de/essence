@@ -3,12 +3,12 @@
     display: flex;
     align-items: center;
 
-    & > *:first-child {
+    & > *:first-child:not(.boolean, .check_boxes, .radio_buttons, .toggle) {
       border-top-left-radius: var(--inputField-borderRadius);
       border-bottom-left-radius: var(--inputField-borderRadius);
     }
 
-    & > *:last-child {
+    & > *:last-child:not(.boolean, .check_boxes, .radio_buttons, .toggle) {
       border-top-right-radius: var(--inputField-borderRadius);
       border-bottom-right-radius: var(--inputField-borderRadius);
     }
