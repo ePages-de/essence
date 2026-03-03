@@ -34,6 +34,25 @@
     }
   }
 
+  &.color {
+    background-color: var(--inputField-background);
+    border: 1px solid var(--inputField-border);
+    padding: 3px;
+
+    &:focus {
+      border-color: var(--inputField-border-focus);
+    }
+
+    &::-webkit-color-swatch-wrapper {
+      padding: 0;
+    }
+
+    &::-webkit-color-swatch {
+      border: none;
+      border-radius: calc(var(--inputField-borderRadius) - 1px);
+    }
+  }
+
   &.text {
     min-height: 100px;
   }

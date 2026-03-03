@@ -1,5 +1,5 @@
 .form-row {
-  &:not(.hidden):not(:last-of-type) {
+  &:not(.hidden):not(:last-child) {
     margin-bottom: 30px;
   }
 }

@@ -33,6 +33,7 @@ SimpleForm.setup do |config|
 
   config.wrappers :vertical_text,
                   class: 'form-row' do |b|
+    b.use :html5
     b.use :placeholder
 
     b.optional :maxlength
