@@ -1,13 +1,16 @@
 .form-label {
-  display: inline-flex;
   align-items: center;
+  display: inline-flex;
+  gap: 5px;
 
   &::first-letter {
     text-transform: uppercase;
   }
 
-  .tooltip {
-    margin-left: 5px;
+  &:has(.tooltip) {
+    .tooltip {
+      order: 1;
+    }
   }
 
   abbr {
