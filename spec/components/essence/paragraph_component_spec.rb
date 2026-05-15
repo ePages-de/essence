@@ -11,8 +11,12 @@ RSpec.describe Essence::ParagraphComponent, type: :component do
       content
     end
 
-    expect(page).to have_css "body > div.paragraph[data-controller='paragraph'][data-paragraph-external-icon-value='#{arrow_up_right_from_square_icon}']",
-                             text: content, count: 1
+    selector = [
+      'body > div.paragraph',
+      "[data-controller='paragraph']",
+      "[data-paragraph-external-icon-value='#{arrow_up_right_from_square_icon}']"
+    ].join
+    expect(page).to have_css(selector, text: content, count: 1)
   end
 
   it 'renders with the given :html_options' do
