@@ -23,8 +23,8 @@ module Essence
     config.view_component.generate.stimulus_controller = true
     config.view_component.generate.locale              = true
     config.view_component.generate.preview             = true
-    config.view_component.preview_paths               << root.join('site/app/previews')
-    config.view_component.component_parent_class       = 'ApplicationComponent'
+    config.view_component.previews.paths              << root.join('site/app/previews')
+    config.view_component.generate.parent_class        = 'ApplicationComponent'
 
     initializer 'essence.add_default_flash_types' do
       ActiveSupport.on_load(:action_controller_base) do
