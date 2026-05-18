@@ -69,7 +69,7 @@ module Site
       config.lookbook.preview_paths                    = [Rails.root.join('app/previews')]
       config.lookbook.preview_inspector.drawer_panels  = [:params, :source, :assets]
       config.lookbook.preview_embeds.policy            = 'ALLOWALL'
-      config.view_component.previews.default_layout     = 'lookbook'
+      config.view_component.previews.default_layout    = 'lookbook'
       config.lookbook.preview_display_options          = {
         wrapper: [
           'background',
