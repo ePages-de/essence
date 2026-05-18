@@ -15,8 +15,10 @@ RSpec.describe Essence::TooltipComponent, type: :component do
                                count: 1
       expect(page).to have_css 'body > span.tooltip > span.tooltip-bubble[data-tooltip-target="bubble"]', text:,
                                                                                                           count: 1
-      expect(page).to have_css 'body > span.tooltip > span.tooltip-bubble > span.tooltip-arrow[data-tooltip-target="arrow"]',
-                               count: 1
+      expect(page).to have_css(
+        'body > span.tooltip > span.tooltip-bubble > span.tooltip-arrow[data-tooltip-target="arrow"]',
+        count: 1
+      )
     end
   end
 
@@ -26,12 +28,16 @@ RSpec.describe Essence::TooltipComponent, type: :component do
     aggregate_failures do
       # TODO: Add validation for data-tooltip-target="icon"
       # TODO: Validate the correct icon
-      expect(page).to have_css "body > span.tooltip.custom-class[data-john='doe'][data-controller='tooltip'] > svg.tooltip-icon",
-                               count: 1
+      expect(page).to have_css(
+        "body > span.tooltip.custom-class[data-john='doe'][data-controller='tooltip'] > svg.tooltip-icon",
+        count: 1
+      )
       expect(page).to have_css 'body > span.tooltip > span.tooltip-bubble[data-tooltip-target="bubble"]', text:,
                                                                                                           count: 1
-      expect(page).to have_css 'body > span.tooltip > span.tooltip-bubble > span.tooltip-arrow[data-tooltip-target="arrow"]',
-                               count: 1
+      expect(page).to have_css(
+        'body > span.tooltip > span.tooltip-bubble > span.tooltip-arrow[data-tooltip-target="arrow"]',
+        count: 1
+      )
     end
   end
 end

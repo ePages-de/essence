@@ -21,6 +21,8 @@ Lint/MissingSuper:
 
 Naming/VariableNumber:
   EnforcedStyle: snake_case
+  Exclude:
+    - 'config/initializers/**/*'
 
 Metrics/MethodLength:
   Enabled: false
@@ -39,3 +41,12 @@ Metrics/ParameterLists:
     - 'app/components/**/*'
     - 'site/app/previews/**/*'
     - 'spec/components/previews/**/*'
+
+Metrics/ClassLength:
+  Exclude:
+    - 'site/app/previews/**/*'
+
+Rails/OutputSafety:
+  Exclude:
+    - 'site/app/previews/**/*'
+    - 'spec/**/*'

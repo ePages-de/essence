@@ -28,18 +28,23 @@ RSpec.describe Essence::StepListComponent, type: :component do
 
     aggregate_failures do
       expect(page).to have_css 'body > div.step-list > h4.step-list-title', text: title, count: 1
-      expect(page).to have_css 'body > div.step-list > div.step-list-items > div.step-list-item > div > div.step-list-bubble',
-                               count: 3
-      expect(page).to have_css 'body > div.step-list > div.step-list-items > div.step-list-item > div > strong.step-list-headline',
-                               count: 3
-      expect(page).to have_css 'body > div.step-list > div.step-list-items > div.step-list-item > div > p.step-list-description',
-                               count: 3
+      expect(page).to have_css(
+        'body > div.step-list > div.step-list-items > div.step-list-item > div > div.step-list-bubble',
+        count: 3
+      )
+      expect(page).to have_css(
+        'body > div.step-list > div.step-list-items > div.step-list-item > div > strong.step-list-headline',
+        count: 3
+      )
+      expect(page).to have_css(
+        'body > div.step-list > div.step-list-items > div.step-list-item > div > p.step-list-description',
+        count: 3
+      )
 
       items.each.with_index(1) do |item, index|
-        expect(page).to have_css "body > div.step-list > div.step-list-items > div.step-list-item:nth-child(#{index}) > div > strong.step-list-headline",
-                                 text: item[:headline], count: 1
-        expect(page).to have_css "body > div.step-list > div.step-list-items > div.step-list-item:nth-child(#{index}) > div > p.step-list-description",
-                                 text: item[:description], count: 1
+        item_selector = "body > div.step-list > div.step-list-items > div.step-list-item:nth-child(#{index}) > div"
+        expect(page).to have_css("#{item_selector} > strong.step-list-headline", text: item[:headline], count: 1)
+        expect(page).to have_css("#{item_selector} > p.step-list-description", text: item[:description], count: 1)
       end
     end
   end
