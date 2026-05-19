@@ -1,0 +1,23 @@
+{
+  "ignored_warnings": [
+    {
+      "warning_type": "Cross-Site Request Forgery",
+      "warning_code": 7,
+      "fingerprint": "8467757e84ea0d7ea13884e1bebb9cd69913885cc43c455f2d71bd8b8c92c5c7",
+      "check_name": "ForgerySetting",
+      "message": "`protect_from_forgery` should be called in `ApplicationController`",
+      "file": "site/app/controllers/application_controller.rb",
+      "line": 3,
+      "link": "https://brakemanscanner.org/docs/warning_types/cross-site_request_forgery/",
+      "code": null,
+      "render_path": null,
+      "location": {
+        "type": "controller",
+        "controller": "ApplicationController"
+      },
+      "user_input": null,
+      "confidence": "High",
+      "note": "The `site/` path is meant for development and testing ONLY. It is never deployed to production and has no real users or sessions."
+    }
+  ]
+}
