@@ -5,7 +5,7 @@ require 'rails_helper'
 RSpec.describe Essence::ModalComponent, type: :component do
   let(:title) { 'Confirm action' }
 
-  def build(footer_alignment: 'end', **kwargs, &block)
+  def build(**kwargs, &block)
     render_inline(described_class.new(title:, **kwargs), &block)
   end
 
@@ -141,9 +141,9 @@ RSpec.describe Essence::ModalComponent, type: :component do
       end
 
       it 'raises InvalidValueError on invalid alignment (raises in local/test env, fallbacks in production)' do
-        expect {
+        expect do
           described_class.new(title:, footer_alignment: 'invalid')
-        }.to raise_error(Essence::FetchOrFallbackHelper::InvalidValueError)
+        end.to raise_error(Essence::FetchOrFallbackHelper::InvalidValueError)
       end
     end
   end
