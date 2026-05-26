@@ -1,0 +1,22 @@
+<%= helpers.turbo_frame_tag 'modal' do %>
+  <div <%= tag.attributes **html_options %>>
+    <div class="modal__dialog">
+      <div class="modal__content" data-modal-target="modalContent">
+        <% if dismiss_icon %>
+          <button type="button" class="modal__close" aria-label="Close" data-action="click->modal#hideModal">
+            <%= render Essence::IconComponent.new(name: 'x_mark', class: 'modal__close-icon') %>
+          </button>
+        <% end %>
+        <div class="modal__header">
+          <h2 id="<%= title_id %>" class="modal__title"><%= title %></h2>
+        </div>
+        <scroll-shadow>
+          <div class="modal__body"><%= content %></div>
+        </scroll-shadow>
+        <% if footer? %>
+          <div class="modal__footer modal__footer--<%= footer_alignment %>"><%= footer %></div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>

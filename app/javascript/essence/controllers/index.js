@@ -20,6 +20,9 @@ application.register('expandable-toggle', ExpandableToggleComponentController)
 import FlashComponentController from 'components/essence/flash_component/flash_component_controller'
 application.register('flash', FlashComponentController)
 
+import ModalComponentController from 'components/essence/modal_component/modal_component_controller'
+application.register('modal', ModalComponentController)
+
 import ParagraphComponentController from 'components/essence/paragraph_component/paragraph_component_controller'
 application.register('paragraph', ParagraphComponentController)
 
