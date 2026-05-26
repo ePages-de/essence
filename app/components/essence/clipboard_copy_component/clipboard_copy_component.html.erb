@@ -1,5 +1,5 @@
 <div <%= tag.attributes **html_options %>>
-  <%= simple_fields_for nil do |f| %>
+  <%= helpers.simple_fields_for nil do |f| %>
     <%= f.input input_name,
                 required: false,
                 readonly: true,
