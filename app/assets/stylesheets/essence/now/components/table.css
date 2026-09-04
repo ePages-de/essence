@@ -1,0 +1,38 @@
+.table {
+  border-collapse: collapse;
+  overflow: hidden;
+  text-align: left;
+  width: 100%;
+
+  thead {
+    background-color: var(--table-header-background);
+    color: var(--table-header-link);
+    font-weight: bold;
+
+    tr {
+      th {
+        padding: 15px;
+        white-space: nowrap;
+
+        &::first-letter {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      background-color: var(--table-row-background);
+      border-bottom: var(--table-row-border);
+
+      td {
+        padding: 15px;
+      }
+
+      &:hover {
+        background-color: var(--table-row-background-hover);
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.expandable-toggle {
+  .button-icon {
+    fill: currentColor;
+    height: 15px;
+    width: 15px;
+  }
+}

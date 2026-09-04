@@ -1,0 +1,101 @@
+.flash {
+  background-color: var(--notification-background);
+  border-radius: var(--notification-borderRadius);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: inline-flex;
+  position: relative;
+  right: 25px;
+  top: 97px;
+  pointer-events: auto;
+  opacity: 1;
+  animation: show 700ms ease-out;
+}
+
+.flash-hide {
+  opacity: 0;
+  right: -250px;
+  transition: all 1.3s ease-out;
+}
+
+.flash-container {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.flash-body {
+  color: var(--notification-text);
+  padding: 8px 14px;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.flash-close {
+  width: 40px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flash-close-icon {
+  width: 8px;
+  height: 8px;
+  position: relative;
+  fill: gray;
+}
+
+.flash-danger,
+.flash-alert {
+  .flash-indicator {
+    background-color: var(--notification-danger);
+  }
+}
+
+.flash-icon {
+  display: block;
+  fill: var(--notification-background);
+  height: 18px;
+  width: 18px;
+}
+
+.flash-indicator {
+  padding: 10px 8px;
+}
+
+.flash-info {
+  .flash-indicator {
+    background-color: var(--notification-info);
+  }
+}
+
+.flash-success,
+.flash-notice {
+  .flash-indicator {
+    background-color: var(--notification-success);
+  }
+}
+
+.flash-warning {
+  .flash-indicator {
+    background-color: var(--notification-warning);
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    right: -250px;
+  }
+
+  to {
+    opacity: 1;
+    right: 25px;
+  }
+}

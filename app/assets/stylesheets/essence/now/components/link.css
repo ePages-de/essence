@@ -1,0 +1,49 @@
+.link {
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  display: inline-flex;
+  height: fit-content;
+  padding: 0;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.link-primary {
+  color: var(--primaryLink-color);
+
+  &:hover {
+    color: var(--primaryLink-hover-color);
+  }
+}
+
+.link-secondary {
+  color: var(--secondaryLink-color);
+
+  &:hover {
+    color: var(--secondaryLink-hover-color);
+  }
+}
+
+.link-danger {
+  color: var(--dangerLink-color);
+
+  &:hover {
+    color: var(--dangerLink-hover-color);
+  }
+}
+
+.link-icon {
+  fill: currentColor;
+  height: 15px;
+  width: 15px;
+
+  &:first-child {
+    margin-right: 5px;
+  }
+
+  &:last-child {
+    margin-left: 6px;
+  }
+}

@@ -1,0 +1,72 @@
+.step-list {
+  background-color: var(--stepList-background);
+  padding: 25px;
+  counter-reset: item-count;
+}
+
+.step-list-title {
+  color: var(--stepList-headline);
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+.step-list-items {
+  margin-left: -2px;
+}
+
+.step-list-item {
+  display: flex;
+
+  &:not(:nth-last-child(1 of .step-list-item)) {
+    padding-bottom: 20px;
+
+    > div:first-child {
+      &::before {
+        content: " ";
+        position: absolute;
+        left: 10px;
+        width: 2px;
+        height: 100%;
+        background-color: var(--stepList-bubble-line);
+        top: 20px;
+      }
+    }
+  }
+
+  > div:first-child {
+    position: relative;
+    width: 35px;
+    flex-shrink: 0;
+  }
+}
+
+.step-list-bubble {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: var(--stepList-bubble-background);
+  color: var(--stepList-bubble-text);
+  line-height: 19px;
+  font-size: 11px;
+  font-weight: bold;
+  text-align: center;
+
+  &::before {
+    counter-increment: item-count;
+    content: counter(item-count);
+  }
+}
+
+.step-list-headline {
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 5px;
+  color: var(--stepList-headline);
+}
+
+.step-list-description {
+  font-size: 14px;
+  margin: 0;
+}

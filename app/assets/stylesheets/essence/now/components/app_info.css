@@ -1,0 +1,45 @@
+.app-info {
+  display: grid;
+  grid-template-columns: 10fr 2fr;
+  column-gap: 30px;
+  grid-auto-rows: minmax(auto, max-content);
+}
+
+.app-info-headline {
+  color: var(--card-headline);
+  font-size: 190%;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.app-info-sub-headline {
+  margin-top: 15px;
+  font-size: 110%;
+  color: var(--workspace-headline);
+  font-weight: bold;
+  line-height: 1;
+}
+
+.app-info-text {
+  ul {
+    padding-left: 24px;
+
+    li {
+      list-style: none;
+
+      &::before {
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9 21.035l-9-8.638 2.791-2.87 6.156 5.874 12.21-12.436 2.843 2.817z"/></svg>');
+        content: '';
+        background-size: contain;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin-right: 6px;
+      }
+    }
+  }
+}
+
+.app-info-logo {
+  width: 100%;
+}

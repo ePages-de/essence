@@ -1,0 +1,64 @@
+.status {
+  align-items: center;
+  border-radius: 3px;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.2;
+  padding: 4px 6px;
+}
+
+.status-bubble {
+  border-radius: 3px;
+  display: inline-flex;
+  flex-shrink: 0;
+  height: 10px;
+  margin-right: 6px;
+  width: 10px;
+
+  &.status-bubble-dotted {
+    border: 1px dotted currentColor;
+  }
+
+  &.status-bubble-outline,
+  &.status-bubble-solid {
+    border: 1px solid currentColor;
+  }
+}
+
+.status-todo {
+  background-color: var(--todo-status-background);
+  color: var(--todo-status-text);
+
+  .status-bubble-solid {
+    background-color: var(--todo-status-icon);
+  }
+}
+
+.status-active {
+  background-color: var(--active-status-background);
+  color: var(--active-status-text);
+
+  .status-bubble-solid {
+    background-color: var(--active-status-icon);
+  }
+}
+
+.status-danger {
+  background-color: var(--danger-status-background);
+  color: var(--danger-status-text);
+
+  .status-bubble-solid {
+    background-color: var(--danger-status-icon);
+  }
+}
+
+.status-outline {
+  background-color: var(--outline-status-background);
+  border: 1px solid var(--outline-status-border);
+  color: var(--outline-status-text);
+
+  .status-bubble-solid {
+    background-color: var(--outline-status-icon);
+  }
+}

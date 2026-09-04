@@ -1,0 +1,21 @@
+.form-group {
+  &:not(:has(trix-editor)) {
+    display: flex;
+    align-items: center;
+
+    & > *:first-child:not(.boolean, .check_boxes, .radio_buttons, .toggle) {
+      border-top-left-radius: var(--inputField-borderRadius);
+      border-bottom-left-radius: var(--inputField-borderRadius);
+    }
+
+    & > *:last-child:not(.boolean, .check_boxes, .radio_buttons, .toggle) {
+      border-top-right-radius: var(--inputField-borderRadius);
+      border-bottom-right-radius: var(--inputField-borderRadius);
+    }
+
+    & > .date:last-of-type {
+      border-top-right-radius: var(--inputField-borderRadius);
+      border-bottom-right-radius: var(--inputField-borderRadius);
+    }
+  }
+}

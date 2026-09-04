@@ -1,0 +1,36 @@
+.expandable {
+  &[data-expandable-expanded-value="false"] {
+    .expandable-content {
+      height: 0;
+    }
+  }
+
+  &[data-expandable-expanded-value="true"] {
+    .button-icon {
+      transform: rotate(90deg);
+    }
+
+    .expandable-content {
+      margin-top: 10px;
+    }
+  }
+
+  .expandable-button {
+    font-weight: bold;
+
+    .button-icon {
+      fill: currentColor;
+      height: 10px;
+      width: 10px;
+    }
+  }
+
+  .expandable-content {
+    interpolate-size: allow-keywords;
+    height: auto;
+    margin-top: 0;
+    overflow: hidden;
+    padding-left: 20px;
+    transition: height 250ms, margin-top 250ms;
+  }
+}

@@ -1,0 +1,35 @@
+.breadcrumb {
+  font-size: 90%;
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-icon {
+  fill: var(--breadcrumb-icon);
+
+  &:first-child {
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+    margin-bottom: 3px;
+  }
+
+  &:not(:first-child) {
+    width: 8px;
+    height: 8px;
+    margin: 0 10px;
+  }
+}
+
+.breadcrumb-item {
+  color: var(--breadcrumb-link);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--breadcrumb-link-hover);
+  }
+}
+
+.breadcrumb-current {
+  color: var(--breadcrumb-text);
+}
