@@ -1,72 +1,60 @@
 .step-list {
   background-color: var(--stepList-background);
-  padding: 25px;
+  border: var(--stepList-border);
   counter-reset: item-count;
+  padding: 15px 20px;
 }
 
 .step-list-title {
-  color: var(--stepList-headline);
-  font-size: 20px;
+  color: var(--stepList-title);
   font-weight: bold;
-  margin-bottom: 15px;
-  margin-top: 0;
+  margin: 0 0 8px;
 }
 
 .step-list-items {
-  margin-left: -2px;
+  padding-left: 8px;
 }
 
 .step-list-item {
   display: flex;
+  line-height: 1.6;
 
-  &:not(:nth-last-child(1 of .step-list-item)) {
-    padding-bottom: 20px;
-
-    > div:first-child {
-      &::before {
-        content: " ";
-        position: absolute;
-        left: 10px;
-        width: 2px;
-        height: 100%;
-        background-color: var(--stepList-bubble-line);
-        top: 20px;
-      }
-    }
+  /* Steps that stack a headline over a description need the extra breathing
+     room; plain one-line steps read better as consecutive lines. */
+  &:not(:nth-last-child(1 of .step-list-item)):has(.step-list-headline) {
+    padding-bottom: 6px;
   }
 
   > div:first-child {
-    position: relative;
-    width: 35px;
+    color: var(--stepList-number);
     flex-shrink: 0;
+    padding-right: 6px;
+    text-align: right;
+    width: 22px;
   }
 }
 
+/* The number replaces the bubble the beyond theme draws for each step. */
 .step-list-bubble {
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  background-color: var(--stepList-bubble-background);
-  color: var(--stepList-bubble-text);
-  line-height: 19px;
-  font-size: 11px;
-  font-weight: bold;
-  text-align: center;
-
   &::before {
     counter-increment: item-count;
-    content: counter(item-count);
+    content: counter(item-count) ".";
   }
 }
 
+/* Steps may drop the headline and carry the whole instruction in the
+   description, in which case the number lines up with the plain sentence. */
 .step-list-headline {
-  font-weight: bold;
-  line-height: 1.2;
-  margin-bottom: 5px;
   color: var(--stepList-headline);
+  display: block;
+  font-weight: bold;
 }
 
-.step-list-description {
-  font-size: 14px;
+/* Covers the description and any note a step adds below it. */
+.step-list-item p {
   margin: 0;
+
+  & + p {
+    margin-top: 10px;
+  }
 }

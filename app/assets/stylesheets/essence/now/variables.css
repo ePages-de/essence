@@ -260,11 +260,11 @@
   /*  ---------------------------------------------------
   /*  Step list
   /*  --------------------------------------------------- */
-  --stepList-background: #f0f0f0;
-  --stepList-headline: #747474;
-  --stepList-bubble-line: #808080;
-  --stepList-bubble-background: #808080;
-  --stepList-bubble-text: white;
+  --stepList-background: white;
+  --stepList-border: 3px solid #dfdfdf;
+  --stepList-title: #4b4b4b;
+  --stepList-headline: #4b4b4b;
+  --stepList-number: #4b4b4b;
   /*
   /*  ---------------------------------------------------
   /*  Reseller logo
