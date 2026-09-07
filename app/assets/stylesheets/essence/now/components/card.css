@@ -6,8 +6,9 @@
 
 .card-headline {
   color: var(--card-headline);
-  font-size: 140%;
-  margin: -10px 0 0.83em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 1.5em;
 }
 
 .card-sub-headline {
