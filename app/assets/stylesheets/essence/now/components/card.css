@@ -9,10 +9,11 @@
   font-family: "Open Sans", sans-serif;
   font-weight: normal;
   font-size: 1.5em;
+  margin-bottom: 0.83em;
 }
 
 .card-sub-headline {
-  color: var(--formGroup-label);
-  font-size: 13px;
-  margin: 0 0 20px;
+  color: var(--card-headline);
+  font-size: 110%;
+  margin: 10px 0 20px;
 }
