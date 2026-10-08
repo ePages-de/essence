@@ -26,6 +26,7 @@
   /*  Card
   /*  --------------------------------------------------- */
   --card-headline: #a3a3a3;
+  --card-subheadline: #7a764c;
   --card-background: white;
   --card-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
   --card-divider-border: 1px solid #e6e6e6;

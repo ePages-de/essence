@@ -56,11 +56,12 @@
 .card-headline {
   color: var(--card-headline);
   font-size: 140%;
-  margin: -10px 0 0.83em;
+  margin: -10px 0 0.415em;
 }
 
 .card-sub-headline {
-  color: var(--formGroup-label);
-  font-size: 13px;
+  color: var(--card-subheadline);
+  font-size: 110%;
+  font-weight: bold;
   margin: 0 0 20px;
 }
