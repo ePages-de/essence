@@ -22,9 +22,10 @@
 
 .app-info-text {
   ul {
-    padding-left: 24px;
+    padding-left: 0;
 
     li {
+      line-height: 1.5;
       list-style: none;
 
       &::before {
