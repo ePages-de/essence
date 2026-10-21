@@ -5,6 +5,7 @@
 
 @import url("flexboxgrid.css");
 
+@import url("beyond/simple_form/actions.css");
 @import url("beyond/simple_form/control.css");
 @import url("beyond/simple_form/error.css");
 @import url("beyond/simple_form/fieldset.css");

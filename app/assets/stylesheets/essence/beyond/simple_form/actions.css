@@ -1,0 +1,28 @@
+:is(.form-actions, .form-actions--left, .form-actions--right, .form-actions--space-between) {
+  align-items: center;
+  display: flex;
+  gap: 30px;
+  justify-content: flex-start;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.form-actions--left {
+  justify-content: flex-start;
+}
+
+.form-actions--right {
+  justify-content: flex-end;
+}
+
+.form-actions--space-between {
+  justify-content: space-between;
+
+  & > * {
+    align-items: center;
+    display: flex;
+    gap: 30px;
+  }
+}
